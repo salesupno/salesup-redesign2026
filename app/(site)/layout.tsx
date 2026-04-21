@@ -9,6 +9,7 @@ const fallbackSettings = {
   navLinks: [
     { label: 'Tjenester', href: '/tjenester' },
     { label: 'Resultater', href: '/resultater' },
+    { label: 'Produkter', href: '/produkter' },
     { label: 'Innsikt', href: '/innsikt' },
     { label: 'Faguttrykk', href: '/faguttrykk' },
     { label: 'Om oss', href: '/om-oss' },

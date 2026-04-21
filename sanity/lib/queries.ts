@@ -282,6 +282,41 @@ export const caseStudyBySlugQuery = groq`
   }
 `
 
+// ─── Produkter ────────────────────────────────────────────────────────────────
+export const allProductsQuery = groq`
+  *[_type == "product"] | order(sortOrder asc) {
+    _id,
+    title,
+    "slug": slug.current,
+    category,
+    badge,
+    tagline,
+    pitch,
+    description,
+    externalUrl,
+    features[] { title, description },
+    sortOrder
+  }
+`
+
+export const productBySlugQuery = groq`
+  *[_type == "product" && slug.current == $slug][0] {
+    _id,
+    title,
+    "slug": slug.current,
+    category,
+    badge,
+    tagline,
+    pitch,
+    description,
+    externalUrl,
+    features[] { title, description },
+    body,
+    metaTitle,
+    metaDescription
+  }
+`
+
 // ─── Sitemap ──────────────────────────────────────────────────────────────────
 export const sitemapQuery = groq`
   {
@@ -290,6 +325,7 @@ export const sitemapQuery = groq`
     "teamMembers": *[_type == "teamMember"] { "slug": slug.current },
     "glossaryTerms": *[_type == "glossaryTerm"] { "slug": slug.current },
     "faqQuestions": *[_type == "faqQuestion"] { "slug": slug.current },
-    "caseStudies": *[_type == "caseStudy"] { "slug": slug.current }
+    "caseStudies": *[_type == "caseStudy"] { "slug": slug.current },
+    "products": *[_type == "product"] { "slug": slug.current }
   }
 `

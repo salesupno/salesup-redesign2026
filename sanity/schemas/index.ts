@@ -6,6 +6,7 @@ import { service } from './service'
 import { post } from './post'
 import { caseStudy } from './caseStudy'
 import { testimonial } from './testimonial'
+import { product } from './product'
 
 export const schemaTypes = [
   // Singleton
@@ -13,6 +14,7 @@ export const schemaTypes = [
   // Core content
   faqQuestion,
   service,
+  product,
   post,
   caseStudy,
   glossaryTerm,
