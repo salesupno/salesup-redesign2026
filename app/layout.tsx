@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Fraunces, DM_Sans } from 'next/font/google'
 import Script from 'next/script'
+import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
 const fraunces = Fraunces({
@@ -75,6 +76,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         {children}
+        <Analytics />
         <Script
           id="organization-schema"
           type="application/ld+json"
