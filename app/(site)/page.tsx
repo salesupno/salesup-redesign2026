@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { client } from '@/sanity/lib/client'
 import { allServicesQuery, featuredTestimonialsQuery, siteSettingsQuery } from '@/sanity/lib/queries'
 import { Button } from '@/components/ui/Button'
-import { HeroPanel } from '@/components/home/HeroPanel'
+import { AICitationFeed } from '@/components/hero/AICitationFeed'
 import { VisibilityQuiz } from '@/components/sections/VisibilityQuiz'
 import { ROICalculator } from '@/components/sections/ROICalculator'
 import { UrgencyBadge } from '@/components/ui/UrgencyBadge'
@@ -200,9 +200,9 @@ export default async function HomePage() {
           </div>
         </div>
 
-        {/* Høyre — visuelt panel */}
-        <div className="hidden xl:block">
-          <HeroPanel />
+        {/* Høyre — AI Citation Feed */}
+        <div className="hidden xl:flex flex-col justify-center bg-white border-l border-black/8 overflow-hidden">
+          <AICitationFeed />
         </div>
       </section>
 
