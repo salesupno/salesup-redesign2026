@@ -1,8 +1,11 @@
 import Link from 'next/link'
 import { client } from '@/sanity/lib/client'
-import { allServicesQuery, featuredTestimonialsQuery } from '@/sanity/lib/queries'
+import { allServicesQuery, featuredTestimonialsQuery, siteSettingsQuery } from '@/sanity/lib/queries'
 import { Button } from '@/components/ui/Button'
 import { HeroPanel } from '@/components/home/HeroPanel'
+import { VisibilityQuiz } from '@/components/sections/VisibilityQuiz'
+import { ROICalculator } from '@/components/sections/ROICalculator'
+import { UrgencyBadge } from '@/components/ui/UrgencyBadge'
 
 export const revalidate = 3600
 
@@ -123,14 +126,17 @@ const metrics = [
 export default async function HomePage() {
   let services = fallbackServices
   let testimonials = fallbackTestimonials
+  let urgencyText = '2 ledige analyseplasser denne uken'
 
   try {
-    const [s, t] = await Promise.all([
+    const [s, t, settings] = await Promise.all([
       client.fetch(allServicesQuery),
       client.fetch(featuredTestimonialsQuery),
+      client.fetch(siteSettingsQuery),
     ])
     if (s?.length) services = s
     if (t?.length) testimonials = t
+    if (settings?.urgencyText) urgencyText = settings.urgencyText
   } catch {
     // Bruker fallback
   }
@@ -169,13 +175,16 @@ export default async function HomePage() {
           </p>
 
           {/* CTAs */}
-          <div id="hero-cta" className="flex flex-wrap gap-4 items-center">
+          <div id="hero-cta" className="flex flex-col gap-4">
+            <UrgencyBadge text={urgencyText} variant="light" />
+            <div className="flex flex-wrap gap-4 items-center">
             <Button href="/kontakt" variant="primary">
               Få gratis synlighetsanalyse →
             </Button>
             <Button href="/resultater" variant="ghost">
               Se resultater
             </Button>
+            </div>
           </div>
 
           {/* Metrikker */}
@@ -316,6 +325,9 @@ export default async function HomePage() {
         </div>
       </section>
 
+      {/* ─── SYNLIGHETSSJEKK-QUIZ ────────────────────────────────────────────── */}
+      <VisibilityQuiz urgencyText={urgencyText} />
+
       {/* ─── TESTIMONIALS ──────────────────────────────────────────────────── */}
       <section className="bg-black py-24 xl:py-28 px-6 md:px-12 xl:px-20">
         <p className="text-[11px] font-medium tracking-[0.14em] uppercase text-green-glow mb-4">
@@ -349,6 +361,9 @@ export default async function HomePage() {
         </div>
       </section>
 
+      {/* ─── ROI-KALKULATOR ────────────────────────────────────────────────── */}
+      <ROICalculator urgencyText={urgencyText} />
+
       {/* ─── GLOBAL CTA ────────────────────────────────────────────────────── */}
       <section className="bg-green-pale py-24 xl:py-32 px-6 md:px-12 xl:px-20">
         <div className="max-w-[1280px] mx-auto flex flex-col xl:flex-row xl:items-center xl:justify-between gap-10">
@@ -364,13 +379,16 @@ export default async function HomePage() {
               som faktisk er mulig.
             </p>
           </div>
-          <div className="flex flex-wrap gap-4 shrink-0">
+          <div className="flex flex-col gap-3 shrink-0">
+            <UrgencyBadge text={urgencyText} variant="light" />
+            <div className="flex flex-wrap gap-4">
             <Button href="/kontakt" variant="primary">
               Book gratis analyse →
             </Button>
             <Button href="tel:+4740000000" variant="outline-dark">
               Ring oss direkte
             </Button>
+            </div>
           </div>
         </div>
       </section>

@@ -143,6 +143,15 @@ export const siteSettings = defineType({
       ],
     }),
 
+    // CRO
+    defineField({
+      name: 'urgencyText',
+      title: 'Urgency-tekst ved CTA-knapper',
+      type: 'string',
+      description: 'Oppdateres manuelt i Studio, typisk ukentlig. Eks: "2 ledige analyseplasser denne uken"',
+      initialValue: '2 ledige analyseplasser denne uken',
+    }),
+
     // Kontaktinfo
     defineField({ name: 'email', title: 'E-post', type: 'string' }),
     defineField({ name: 'phone', title: 'Telefon', type: 'string' }),

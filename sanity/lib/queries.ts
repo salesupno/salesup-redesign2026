@@ -15,6 +15,7 @@ export const siteSettingsQuery = groq`
     globalCTAHeading,
     globalCTAIngress,
     globalCTAPrimary,
+    urgencyText,
     footerColumns,
     email,
     phone,
