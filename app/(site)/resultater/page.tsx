@@ -44,29 +44,33 @@ interface CaseStudy {
 
 const fallbackCases: CaseStudy[] = [
   {
-    _id: '1', clientName: 'Jøtul AS', slug: 'jotul', industry: 'Industri / E-handel',
-    excerpt: 'Fra usynlig til markedsleder på peisovner og peiseinnsatser i Norden.',
+    _id: '1', clientName: 'Smart Varme', slug: 'smart-varme', industry: 'Peisovner & vedovner',
+    featured: true,
+    excerpt: 'Fra null til #1 på "peisovn Bergen" — Smart Varme dominerer nå lokalt søk på peiser, vedovner og peisrehabilitering i hele Vestlandet.',
     metrics: [
-      { value: '+312%', label: 'organisk trafikk', period: '12 mnd' },
-      { value: '+87%', label: 'organiske leads', period: '12 mnd' },
-      { value: '#1', label: 'peisovner Google NO' },
+      { value: '+280%', label: 'organisk trafikk', period: '9 mnd' },
+      { value: '+140%', label: 'organiske forespørsler', period: '9 mnd' },
+      { value: '#1', label: '"peisovn Bergen" Google' },
     ],
     services: [{ _id: 's1', slug: 'seo', title: 'SEO' }],
   },
   {
-    _id: '2', clientName: 'Nordic Eiendom', slug: 'nordic-eiendom', industry: 'Eiendom',
-    excerpt: 'Dobling av kontorleie-leads gjennom lokal SEO og innholdsoptimalisering.',
+    _id: '2', clientName: 'First Camp', slug: 'first-camp', industry: 'Camping & friluftsliv',
+    featured: true,
+    excerpt: 'Nordeuropas ledende campingkjede økte organisk trafikk med 21,9 % på 6 måneder og økte andelen salg fra organisk søk fra 30 % til 41 %.',
     metrics: [
-      { value: '2×', label: 'leads per mnd', period: '6 mnd' },
-      { value: '-34%', label: 'kostnad per lead' },
+      { value: '+21,9%', label: 'organisk trafikk', period: '6 mnd' },
+      { value: '41%', label: 'salg fra organisk søk', period: '12 mnd' },
     ],
+    services: [{ _id: 's2', slug: 'seo', title: 'SEO' }, { _id: 's3', slug: 'aeo', title: 'AEO' }],
   },
   {
-    _id: '3', clientName: 'Komplett Helse', slug: 'komplett-helse', industry: 'Helse',
-    excerpt: 'AI-drevet innholdsstrategi som plasserte merkevaren i ChatGPT-svar.',
+    _id: '3', clientName: 'Ditt Uterom', slug: 'ditt-uterom', industry: 'Hage & uterom',
+    featured: true,
+    excerpt: 'Ditt Uterom gikk fra å konkurrere på pris til å eie søkeresultatene for inspirasjon og rådgivning.',
     metrics: [
-      { value: '+54%', label: 'AI-synlighet', period: '8 mnd' },
-      { value: '+23%', label: 'nettstedstrafikk' },
+      { value: '+195%', label: 'organisk trafikk', period: '8 mnd' },
+      { value: '+67%', label: 'prosjektforespørsler', period: '8 mnd' },
     ],
   },
 ]

@@ -61,7 +61,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 const categoryColor: Record<string, { bg: string; text: string; border: string }> = {
   saas:             { bg: 'bg-accent',            text: 'text-black',      border: 'border-accent' },
   'wordpress-plugin': { bg: 'bg-green-pale',      text: 'text-green-deep', border: 'border-green-pale' },
-  'shopify-app':    { bg: 'bg-green-glow/20',      text: 'text-green-deep', border: 'border-green-glow/30' },
+  'shopify-app':    { bg: 'bg-accent/15',            text: 'text-black',      border: 'border-accent/30' },
 }
 
 const portableComponents = {

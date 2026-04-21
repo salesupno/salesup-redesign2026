@@ -39,7 +39,7 @@ const categoryLabel: Record<string, string> = {
 const categoryColor: Record<string, string> = {
   saas: 'bg-accent text-black',
   'wordpress-plugin': 'bg-green-pale text-green-deep',
-  'shopify-app': 'bg-green-glow/20 text-green-deep',
+  'shopify-app': 'bg-accent/15 text-black',
 }
 
 const fallback: Product[] = []
