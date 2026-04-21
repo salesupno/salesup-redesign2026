@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
+export const dynamic = 'force-dynamic'
 
 const RECIPIENT = 'tommy@salesup.no'
 const FROM = 'nettsted@salesup.no'
@@ -39,6 +39,7 @@ export async function POST(request: NextRequest) {
   }
 
   try {
+    const resend = new Resend(process.env.RESEND_API_KEY)
     await resend.emails.send({
       from: FROM,
       to: RECIPIENT,
