@@ -1,13 +1,17 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from 'next-sanity'
 
-const writeClient = createClient({
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!,
-  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET!,
-  apiVersion: '2024-01-01',
-  token: process.env.SANITY_WRITE_TOKEN,
-  useCdn: false,
-})
+export const dynamic = 'force-dynamic'
+
+function getWriteClient() {
+  return createClient({
+    projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!,
+    dataset: process.env.NEXT_PUBLIC_SANITY_DATASET ?? 'production',
+    apiVersion: '2024-01-01',
+    token: process.env.SANITY_WRITE_TOKEN,
+    useCdn: false,
+  })
+}
 
 interface GlossaryTermInput {
   term: string
@@ -48,6 +52,7 @@ export async function POST(request: NextRequest) {
   }
 
   const results = { created: 0, skipped: 0, errors: [] as string[] }
+  const writeClient = getWriteClient()
 
   for (const item of terms) {
     if (typeof item !== 'object' || item === null) continue
