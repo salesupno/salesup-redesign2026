@@ -70,7 +70,8 @@ export default async function SiteLayout({
     // Sanity er ikke konfigurert ennå — bruk fallback
   }
 
-  const navLinks = settings?.navLinks ?? fallbackSettings.navLinks
+  // navLinks er alltid hardkodet — Sanity støtter ikke dropdown-hierarki
+  const navLinks = fallbackSettings.navLinks
   const navCTA = settings?.navCTA ?? fallbackSettings.navCTA
   const footerColumns = settings?.footerColumns ?? fallbackSettings.footerColumns
   const email = settings?.email ?? fallbackSettings.email
