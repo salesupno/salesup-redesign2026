@@ -1,26 +1,108 @@
 @import "tailwindcss";
 
+/* ─── SalesUp Design System ─────────────────────────────────── */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-black:        #0A0A08;
+  --color-white:        #F7F5EF;
+  --color-cream:        #EDE9DF;
+
+  --color-green-deep:   #1A4D2E;
+  --color-green-mid:    #2C6E43;
+  --color-green-light:  #4A9B63;
+  --color-green-glow:   #7EC99A;
+  --color-green-pale:   #E4F5B4;
+
+  --color-accent:       #C8F04A;
+  --color-accent-dark:  #9EC235;
+
+  --color-text-primary: #0A0A08;
+  --color-text-muted:   #6B6B62;
+  --color-text-subtle:  #9B9B92;
+
+  --color-border:       rgba(10,10,8,0.10);
+  --color-border-mid:   rgba(10,10,8,0.18);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Colors */
+  --color-black:        var(--color-black);
+  --color-white:        var(--color-white);
+  --color-cream:        var(--color-cream);
+  --color-green-deep:   var(--color-green-deep);
+  --color-green-mid:    var(--color-green-mid);
+  --color-green-light:  var(--color-green-light);
+  --color-green-glow:   var(--color-green-glow);
+  --color-green-pale:   var(--color-green-pale);
+  --color-accent:       var(--color-accent);
+  --color-accent-dark:  var(--color-accent-dark);
+  --color-muted:        var(--color-text-muted);
+  --color-subtle:       var(--color-text-subtle);
+
+  /* Fonts */
+  --font-display: var(--font-fraunces), Georgia, serif;
+  --font-body:    var(--font-dm-sans), sans-serif;
+
+  /* Letter spacing */
+  --letter-spacing-tighter: -0.018em;
+  --letter-spacing-tight:   -0.012em;
+  --letter-spacing-snug:    -0.006em;
+  --letter-spacing-caps:     0.14em;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ─── Base styles ────────────────────────────────────────────── */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-white);
+  color: var(--color-black);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.65;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ─── Typography helpers ─────────────────────────────────────── */
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.tracking-caps {
+  letter-spacing: var(--letter-spacing-caps);
+}
+
+.tracking-tight-display {
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+/* ─── Animations ─────────────────────────────────────────────── */
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.3; }
+}
+
+@keyframes growBar {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
 }
