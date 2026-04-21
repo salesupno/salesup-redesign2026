@@ -8,11 +8,18 @@ import { siteSettingsQuery } from '@/sanity/lib/queries'
 const fallbackSettings = {
   navLinks: [
     { label: 'Tjenester', href: '/tjenester' },
-    { label: 'Resultater', href: '/resultater' },
     { label: 'Produkter', href: '/produkter' },
-    { label: 'Innsikt', href: '/innsikt' },
-    { label: 'Faguttrykk', href: '/faguttrykk' },
-    { label: 'Om oss', href: '/om-oss' },
+    { label: 'Resultater', href: '/resultater' },
+    {
+      label: 'Ressurser',
+      href: '#',
+      children: [
+        { label: 'Innsikt', href: '/innsikt', description: 'Artikler og guider om SEO, AEO og GEO' },
+        { label: 'FAQ', href: '/faq', description: 'Svar på de vanligste spørsmålene' },
+        { label: 'Faguttrykk', href: '/faguttrykk', description: 'Ordliste A–Å for digital markedsføring' },
+        { label: 'Om oss', href: '/om-oss', description: 'Teamet bak SalesUp Norway' },
+      ],
+    },
   ],
   navCTA: { label: 'Book analyse', href: '/kontakt' },
   footerColumns: [
