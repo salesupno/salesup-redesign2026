@@ -155,10 +155,8 @@ export function Nav({ navLinks, navCTA }: NavProps) {
   return (
     <header
       className={clsx(
-        'fixed top-0 left-0 right-0 z-50 h-16 transition-all duration-300',
-        scrolled
-          ? 'bg-white/95 backdrop-blur-md border-b border-black/8'
-          : 'bg-transparent'
+        'fixed top-0 left-0 right-0 z-50 h-16 bg-white border-b border-black/8 transition-shadow duration-300',
+        scrolled ? 'shadow-sm' : 'shadow-none'
       )}
     >
       <div className="max-w-[1280px] mx-auto px-6 md:px-12 xl:px-20 h-full flex items-center justify-between">

@@ -124,7 +124,7 @@ export default async function ProduktPage({ params }: Props) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }} />
 
       {/* ─── Breadcrumb ───────────────────────────────────────────────── */}
-      <div className="bg-cream border-b border-black/8 px-6 py-3">
+      <div className="mt-16 bg-cream border-b border-black/8 px-6 py-3">
         <div className="max-w-6xl mx-auto flex items-center gap-2 text-sm text-muted">
           <Link href="/" className="hover:text-black transition-colors">Forside</Link>
           <span>/</span>
