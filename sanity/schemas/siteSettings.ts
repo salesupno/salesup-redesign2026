@@ -152,6 +152,61 @@ export const siteSettings = defineType({
       initialValue: '2 ledige analyseplasser denne uken',
     }),
 
+    // Slik jobber vi — prosess
+    defineField({
+      name: 'processSteps',
+      title: '"Slik jobber vi" — steg',
+      type: 'array',
+      of: [
+        {
+          type: 'object',
+          fields: [
+            defineField({ name: 'num', title: 'Stegnummer', type: 'string', description: 'F.eks. "01"' }),
+            defineField({ name: 'title', title: 'Tittel', type: 'string' }),
+            defineField({ name: 'body', title: 'Beskrivelse', type: 'text', rows: 2 }),
+          ],
+          preview: { select: { title: 'num', subtitle: 'title' } },
+        },
+      ],
+    }),
+
+    // Fremhevet case (kort i "Slik jobber vi"-seksjonen)
+    defineField({
+      name: 'featuredCaseClientName',
+      title: 'Fremhevet case: Kundenavn',
+      type: 'string',
+    }),
+    defineField({
+      name: 'featuredCaseStat',
+      title: 'Fremhevet case: Nøkkeltall',
+      type: 'string',
+      description: 'F.eks. "340%"',
+    }),
+    defineField({
+      name: 'featuredCaseStatLabel',
+      title: 'Fremhevet case: Nøkkeltall-etikett',
+      type: 'string',
+      description: 'F.eks. "økning i organisk trafikk over 8 måneder"',
+    }),
+    defineField({
+      name: 'featuredCaseQuote',
+      title: 'Fremhevet case: Sitat',
+      type: 'text',
+      rows: 3,
+    }),
+    defineField({
+      name: 'featuredCaseAuthor',
+      title: 'Fremhevet case: Sitatforfatter',
+      type: 'string',
+      description: 'F.eks. "Daglig leder, Smart Varme"',
+    }),
+    defineField({
+      name: 'featuredCaseSlug',
+      title: 'Fremhevet case: Lenke (slug)',
+      type: 'string',
+      description: 'F.eks. "smart-varme" — lenker til /resultater/[slug]',
+    }),
+
     // Kontaktinfo
     defineField({ name: 'email', title: 'E-post', type: 'string' }),
     defineField({ name: 'phone', title: 'Telefon', type: 'string' }),

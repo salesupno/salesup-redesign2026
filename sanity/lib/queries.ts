@@ -12,6 +12,13 @@ export const siteSettingsQuery = groq`
     heroPrimaryCTA,
     heroSecondaryCTA,
     metrics,
+    processSteps,
+    featuredCaseClientName,
+    featuredCaseStat,
+    featuredCaseStatLabel,
+    featuredCaseQuote,
+    featuredCaseAuthor,
+    featuredCaseSlug,
     globalCTAHeading,
     globalCTAIngress,
     globalCTAPrimary,
@@ -22,6 +29,17 @@ export const siteSettingsQuery = groq`
     orgNr,
     linkedinUrl,
     address
+  }
+`
+
+// ─── AI-siteringer ────────────────────────────────────────────────────────────
+export const aiCitationsQuery = groq`
+  *[_type == "aiCitation" && active == true] | order(sortOrder asc) {
+    _id,
+    source,
+    company,
+    query,
+    minutesAgo
   }
 `
 

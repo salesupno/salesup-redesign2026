@@ -7,6 +7,7 @@ import { post } from './post'
 import { caseStudy } from './caseStudy'
 import { testimonial } from './testimonial'
 import { product } from './product'
+import { aiCitation } from './aiCitation'
 
 export const schemaTypes = [
   // Singleton
@@ -20,4 +21,5 @@ export const schemaTypes = [
   glossaryTerm,
   teamMember,
   testimonial,
+  aiCitation,
 ]

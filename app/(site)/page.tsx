@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { client } from '@/sanity/lib/client'
-import { allServicesQuery, featuredTestimonialsQuery, siteSettingsQuery } from '@/sanity/lib/queries'
+import { allServicesQuery, featuredTestimonialsQuery, siteSettingsQuery, aiCitationsQuery } from '@/sanity/lib/queries'
+import type { SanityCitation } from '@/components/hero/AICitationFeed'
 import { Button } from '@/components/ui/Button'
 import { AICitationFeed } from '@/components/hero/AICitationFeed'
 import { VisibilityQuiz } from '@/components/sections/VisibilityQuiz'
@@ -71,18 +72,18 @@ const fallbackTestimonials = [
   {
     _id: 't1',
     quote:
-      'SalesUp sørget for formidabel vekst i et tøft marked. September pleide å være måneden med svakest salg — nå er det en av de sterkeste.',
+      'Vi hadde ikke trodd at SEO kunne gjøre så stor forskjell for et lokalt håndverkerfirma. SalesUp skjønte bransjen vår og resultatet taler for seg selv.',
     author: 'Daglig leder',
-    company: 'Jøtul',
+    company: 'Smart Varme',
     authorTitle: 'Daglig leder',
   },
   {
     _id: 't2',
     quote:
-      'Vi doblet organisk trafikk på 6 måneder. SalesUp er den mest kompetente SEO-partneren vi noensinne har jobbet med.',
-    author: 'Marketing Manager',
-    company: 'Norsk kunde',
-    authorTitle: 'Marketing Manager',
+      'SalesUp hjalp oss med å øke organisk trafikk med 21,9 % på 6 måneder. Andelen salg fra organisk søk og AI har gått fra 30 % til 41 % på 12 måneder.',
+    author: 'Digital Manager',
+    company: 'First Camp',
+    authorTitle: 'Digital Manager',
   },
   {
     _id: 't3',
@@ -94,7 +95,7 @@ const fallbackTestimonials = [
   },
 ]
 
-const processSteps = [
+const fallbackProcessSteps = [
   {
     num: '01',
     title: 'Synlighetsanalyse & gap-kartlegging',
@@ -117,7 +118,7 @@ const processSteps = [
   },
 ]
 
-const metrics = [
+const fallbackMetrics = [
   { value: '100+', label: 'kunder hjulpet' },
   { value: '20 år', label: 'SEO-erfaring' },
   { value: '5× ROAS', label: 'dokumentert snitt' },
@@ -127,16 +128,49 @@ export default async function HomePage() {
   let services = fallbackServices
   let testimonials = fallbackTestimonials
   let urgencyText = '2 ledige analyseplasser denne uken'
+  let citations: SanityCitation[] = []
+  let processSteps = fallbackProcessSteps
+  let metrics = fallbackMetrics
+  let heroBadge = 'Norges første SEO + AEO + GEO-byrå'
+  let heroHeading = 'Synlighet som bygges,'
+  let heroHeadingAccent = 'ikke leies.'
+  let heroIngress = 'Vi hjelper ambisiøse bedrifter å bli funnet — i Google, i AI-assistenter og på tvers av alle kanaler der kundene faktisk søker.'
+  let heroPrimaryCTA = { label: 'Få gratis synlighetsanalyse →', href: '/kontakt' }
+  let heroSecondaryCTA = { label: 'Se resultater', href: '/resultater' }
+  let featuredCaseClientName = 'Smart Varme'
+  let featuredCaseStat = '+280%'
+  let featuredCaseStatLabel = 'økning i organisk trafikk over 9 måneder'
+  let featuredCaseQuote = 'Vi hadde ikke trodd at SEO kunne gjøre så stor forskjell for et lokalt håndverkerfirma. SalesUp skjønte bransjen vår og resultatet taler for seg selv.'
+  let featuredCaseAuthor = 'Daglig leder, Smart Varme'
+  let featuredCaseSlug = 'smart-varme'
 
   try {
-    const [s, t, settings] = await Promise.all([
+    const [s, t, settings, cit] = await Promise.all([
       client.fetch(allServicesQuery),
       client.fetch(featuredTestimonialsQuery),
       client.fetch(siteSettingsQuery),
+      client.fetch(aiCitationsQuery),
     ])
     if (s?.length) services = s
     if (t?.length) testimonials = t
-    if (settings?.urgencyText) urgencyText = settings.urgencyText
+    if (cit?.length) citations = cit
+    if (settings) {
+      if (settings.urgencyText) urgencyText = settings.urgencyText
+      if (settings.heroBadge) heroBadge = settings.heroBadge
+      if (settings.heroHeading) heroHeading = settings.heroHeading
+      if (settings.heroHeadingAccent) heroHeadingAccent = settings.heroHeadingAccent
+      if (settings.heroIngress) heroIngress = settings.heroIngress
+      if (settings.heroPrimaryCTA?.label) heroPrimaryCTA = settings.heroPrimaryCTA
+      if (settings.heroSecondaryCTA?.label) heroSecondaryCTA = settings.heroSecondaryCTA
+      if (settings.metrics?.length) metrics = settings.metrics
+      if (settings.processSteps?.length) processSteps = settings.processSteps
+      if (settings.featuredCaseClientName) featuredCaseClientName = settings.featuredCaseClientName
+      if (settings.featuredCaseStat) featuredCaseStat = settings.featuredCaseStat
+      if (settings.featuredCaseStatLabel) featuredCaseStatLabel = settings.featuredCaseStatLabel
+      if (settings.featuredCaseQuote) featuredCaseQuote = settings.featuredCaseQuote
+      if (settings.featuredCaseAuthor) featuredCaseAuthor = settings.featuredCaseAuthor
+      if (settings.featuredCaseSlug) featuredCaseSlug = settings.featuredCaseSlug
+    }
   } catch {
     // Bruker fallback
   }
@@ -153,14 +187,14 @@ export default async function HomePage() {
               className="w-1.5 h-1.5 rounded-full bg-green-light animate-[pulse-dot_2s_ease-in-out_infinite]"
               aria-hidden="true"
             />
-            Norges første SEO + AEO + GEO-byrå
+            {heroBadge}
           </div>
 
           {/* H1 */}
           <h1 className="font-display text-[clamp(44px,5.5vw,72px)] font-extrabold leading-[1.05] tracking-[-0.018em] mb-7">
-            Synlighet som bygges,{' '}
+            {heroHeading}{' '}
             <em className="not-italic text-green-deep relative inline-block">
-              ikke leies.
+              {heroHeadingAccent}
               <span
                 className="absolute left-0 right-0 bottom-1 h-[3px] rounded-sm bg-accent"
                 aria-hidden="true"
@@ -170,19 +204,18 @@ export default async function HomePage() {
 
           {/* Ingress */}
           <p className="text-[18px] font-light text-muted leading-[1.7] max-w-[480px] mb-11">
-            Vi hjelper ambisiøse bedrifter å bli funnet — i Google, i AI-assistenter og på tvers av
-            alle kanaler der kundene faktisk søker.
+            {heroIngress}
           </p>
 
           {/* CTAs */}
           <div id="hero-cta" className="flex flex-col gap-4">
             <UrgencyBadge text={urgencyText} variant="light" />
             <div className="flex flex-wrap gap-4 items-center">
-            <Button href="/kontakt" variant="primary">
-              Få gratis synlighetsanalyse →
+            <Button href={heroPrimaryCTA.href} variant="primary">
+              {heroPrimaryCTA.label}
             </Button>
-            <Button href="/resultater" variant="ghost">
-              Se resultater
+            <Button href={heroSecondaryCTA.href} variant="ghost">
+              {heroSecondaryCTA.label}
             </Button>
             </div>
           </div>
@@ -202,7 +235,7 @@ export default async function HomePage() {
 
         {/* Høyre — AI Citation Feed */}
         <div className="hidden xl:flex flex-col justify-center bg-white border-l border-black/8 overflow-hidden">
-          <AICitationFeed />
+          <AICitationFeed seedCitations={citations} />
         </div>
       </section>
 
@@ -296,27 +329,26 @@ export default async function HomePage() {
           <div className="xl:sticky xl:top-24">
             <div className="bg-green-deep rounded-3xl p-10 text-white">
               <p className="font-display font-extrabold text-[22px] tracking-tight text-white/50 mb-8">
-                Jøtul
+                {featuredCaseClientName}
               </p>
               <div className="mb-8">
                 <span className="font-display text-[64px] font-extrabold tracking-[-0.02em] text-accent leading-none block">
-                  340%
+                  {featuredCaseStat}
                 </span>
                 <span className="text-[14px] text-white/55 mt-1.5 block">
-                  økning i organisk trafikk over 8 måneder
+                  {featuredCaseStatLabel}
                 </span>
               </div>
               <blockquote className="border-t border-white/12 pt-6">
                 <p className="text-[15px] font-light text-white/70 leading-[1.7] italic">
-                  "SalesUp sørget for formidabel vekst i et tøft marked. September pleide å være
-                  måneden med svakest salg — nå er det en av de sterkeste."
+                  &quot;{featuredCaseQuote}&quot;
                 </p>
                 <footer className="text-[13px] font-medium text-white/40 mt-3">
-                  — Daglig leder, Jøtul
+                  — {featuredCaseAuthor}
                 </footer>
               </blockquote>
               <div className="mt-8">
-                <Button href="/resultater" variant="outline-white">
+                <Button href={`/resultater/${featuredCaseSlug}`} variant="outline-white">
                   Se alle resultater →
                 </Button>
               </div>
