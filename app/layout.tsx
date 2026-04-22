@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
-import { Fraunces, DM_Sans } from 'next/font/google'
+import { Syne, DM_Sans } from 'next/font/google'
 import Script from 'next/script'
 import './globals.css'
 
-const fraunces = Fraunces({
+const syne = Syne({
   subsets: ['latin'],
-  axes: ['opsz', 'SOFT', 'WONK'],
-  variable: '--font-fraunces',
+  weight: ['400', '500', '600', '700', '800'],
+  variable: '--font-syne',
   display: 'swap',
 })
 
@@ -71,7 +71,7 @@ export default function RootLayout({
   return (
     <html
       lang="nb"
-      className={`${fraunces.variable} ${dmSans.variable} h-full`}
+      className={`${syne.variable} ${dmSans.variable} h-full`}
     >
       <body className="min-h-full flex flex-col">
         {children}
