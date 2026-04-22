@@ -90,7 +90,7 @@ export default async function InnsiktPage() {
         <p className="text-[11px] font-medium tracking-[0.14em] uppercase text-green-light mb-4">
           Innsikt
         </p>
-        <h1 className="font-display text-[clamp(40px,5vw,68px)] font-extrabold leading-[1.05] tracking-[-0.018em] max-w-[760px] mb-6">
+        <h1 className="font-display text-[clamp(40px,5vw,68px)] leading-[1.05] tracking-[-0.018em] max-w-[760px] mb-6">
           Faglig innsikt fra de som gjør det
         </h1>
         <p className="text-[18px] font-light text-muted leading-[1.7] max-w-[540px]">
@@ -117,7 +117,7 @@ export default async function InnsiktPage() {
                   <span className="text-[12px] text-muted">{formatDate(featured.publishedAt)}</span>
                 )}
               </div>
-              <h2 className="font-display text-[clamp(28px,3.5vw,48px)] font-extrabold tracking-[-0.012em] leading-[1.1] mb-5 group-hover:text-green-deep transition-colors">
+              <h2 className="font-display text-[clamp(28px,3.5vw,48px)] tracking-[-0.012em] leading-[1.1] mb-5 group-hover:text-green-deep transition-colors">
                 {featured.title}
               </h2>
               {featured.excerpt && (

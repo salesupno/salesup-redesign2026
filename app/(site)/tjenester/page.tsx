@@ -65,7 +65,7 @@ export default async function TjenesterPage() {
         <p className="text-[11px] font-medium tracking-[0.14em] uppercase text-green-light mb-4">
           Tjenester
         </p>
-        <h1 className="font-display text-[clamp(40px,5vw,68px)] font-extrabold leading-[1.05] tracking-[-0.018em] max-w-[720px] mb-6">
+        <h1 className="font-display text-[clamp(40px,5vw,68px)] leading-[1.05] tracking-[-0.018em] max-w-[720px] mb-6">
           Alt du trenger for aktiv organisk synlighet
         </h1>
         <p className="text-[18px] font-light text-muted leading-[1.7] max-w-[560px] mb-12">
@@ -126,7 +126,7 @@ export default async function TjenesterPage() {
       <section className="bg-green-pale py-24 px-6 md:px-12 xl:px-20">
         <div className="max-w-[1280px] mx-auto flex flex-col xl:flex-row xl:items-center xl:justify-between gap-10">
           <div>
-            <h2 className="font-display text-[clamp(28px,3vw,44px)] font-extrabold tracking-[-0.012em] leading-[1.1] text-green-deep max-w-[540px]">
+            <h2 className="font-display text-[clamp(28px,3vw,44px)] tracking-[-0.012em] leading-[1.1] text-green-deep max-w-[540px]">
               Ikke sikker på hva du trenger?
             </h2>
             <p className="text-[17px] font-light text-black/60 leading-[1.7] mt-4 max-w-[440px]">

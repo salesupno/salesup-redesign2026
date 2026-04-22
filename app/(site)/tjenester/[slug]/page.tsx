@@ -117,7 +117,7 @@ export default async function TjenestePage({ params }: Props) {
           </p>
         </div>
 
-        <h1 className="font-display text-[clamp(40px,5vw,68px)] font-extrabold leading-[1.05] tracking-[-0.018em] max-w-[760px] mb-6">
+        <h1 className="font-display text-[clamp(40px,5vw,68px)] leading-[1.05] tracking-[-0.018em] max-w-[760px] mb-6">
           {service.heroHeading || service.title}
         </h1>
         {service.heroIngress && (
@@ -135,7 +135,7 @@ export default async function TjenestePage({ params }: Props) {
       {service.deliverables?.length > 0 && (
         <section className="px-6 md:px-12 xl:px-20 py-20">
           <p className="text-[11px] font-medium tracking-[0.14em] uppercase text-green-light mb-4">Hva du får</p>
-          <h2 className="font-display text-[clamp(28px,3vw,42px)] font-extrabold tracking-[-0.012em] leading-[1.1] max-w-[600px] mb-12">
+          <h2 className="font-display text-[clamp(28px,3vw,42px)] tracking-[-0.012em] leading-[1.1] max-w-[600px] mb-12">
             Konkrete leveranser — ikke vage løfter
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
@@ -158,7 +158,7 @@ export default async function TjenestePage({ params }: Props) {
       {service.processSteps?.length > 0 && (
         <section className="bg-cream px-6 md:px-12 xl:px-20 py-20">
           <p className="text-[11px] font-medium tracking-[0.14em] uppercase text-green-light mb-4">Slik jobber vi</p>
-          <h2 className="font-display text-[clamp(28px,3vw,42px)] font-extrabold tracking-[-0.012em] leading-[1.1] max-w-[600px] mb-12">
+          <h2 className="font-display text-[clamp(28px,3vw,42px)] tracking-[-0.012em] leading-[1.1] max-w-[600px] mb-12">
             Vår prosess
           </h2>
           <div className="flex flex-col max-w-[680px]">
@@ -210,7 +210,7 @@ export default async function TjenestePage({ params }: Props) {
             <p className="text-[11px] font-medium tracking-[0.14em] uppercase text-green-light mb-4">
               Vanlige spørsmål
             </p>
-            <h2 className="font-display text-[clamp(24px,2.5vw,36px)] font-extrabold tracking-[-0.012em] leading-[1.1] mb-10">
+            <h2 className="font-display text-[clamp(24px,2.5vw,36px)] tracking-[-0.012em] leading-[1.1] mb-10">
               Spørsmål om {service.title.toLowerCase()}
             </h2>
             <FAQWidget faqQuestions={service.faqQuestions} />
@@ -222,7 +222,7 @@ export default async function TjenestePage({ params }: Props) {
       <section className="bg-green-pale py-24 px-6 md:px-12 xl:px-20">
         <div className="max-w-[1280px] mx-auto flex flex-col xl:flex-row xl:items-center xl:justify-between gap-10">
           <div>
-            <h2 className="font-display text-[clamp(28px,3vw,44px)] font-extrabold tracking-[-0.012em] leading-[1.1] text-green-deep max-w-[540px]">
+            <h2 className="font-display text-[clamp(28px,3vw,44px)] tracking-[-0.012em] leading-[1.1] text-green-deep max-w-[540px]">
               {service.cta?.heading || `Klar for å komme i gang med ${service.title.toLowerCase()}?`}
             </h2>
             <p className="text-[17px] font-light text-black/60 leading-[1.7] mt-4 max-w-[440px]">

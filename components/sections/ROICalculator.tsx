@@ -55,7 +55,7 @@ export function ROICalculator({ urgencyText }: ROICalculatorProps) {
           <p className="text-[11px] font-medium tracking-[0.14em] uppercase text-accent mb-4">
             Regnestykket
           </p>
-          <h2 className="font-display text-[clamp(28px,3.5vw,44px)] font-extrabold tracking-[-0.012em] leading-[1.1] text-white mb-4">
+          <h2 className="font-display text-[clamp(28px,3.5vw,44px)] tracking-[-0.012em] leading-[1.1] text-white mb-4">
             Hva koster usynlighet din bedrift?
           </h2>
           <p className="text-[17px] font-light text-white/60 leading-[1.7] max-w-[560px]">

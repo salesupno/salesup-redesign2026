@@ -85,7 +85,7 @@ export default async function CaseStudyPage({ params }: Props) {
           </span>
         )}
 
-        <h1 className="font-display text-[clamp(36px,4.5vw,62px)] font-extrabold leading-[1.06] tracking-[-0.018em] max-w-[760px] mb-6">
+        <h1 className="font-display text-[clamp(36px,4.5vw,62px)] leading-[1.06] tracking-[-0.018em] max-w-[760px] mb-6">
           {c.clientName}
         </h1>
         {c.excerpt && (
@@ -151,7 +151,7 @@ export default async function CaseStudyPage({ params }: Props) {
           <p className="text-[11px] font-medium tracking-[0.14em] uppercase text-green-light mb-4">
             Utfordringen
           </p>
-          <h2 className="font-display text-[clamp(22px,2.2vw,32px)] font-extrabold tracking-tight mb-6 leading-[1.15]">
+          <h2 className="font-display text-[clamp(22px,2.2vw,32px)] tracking-tight mb-6 leading-[1.15]">
             Hva var situasjonen da vi startet?
           </h2>
           <div className="prose prose-lg max-w-none prose-headings:font-display prose-a:text-green-deep">
@@ -167,7 +167,7 @@ export default async function CaseStudyPage({ params }: Props) {
             <p className="text-[11px] font-medium tracking-[0.14em] uppercase text-green-light mb-4">
               Løsningen
             </p>
-            <h2 className="font-display text-[clamp(22px,2.2vw,32px)] font-extrabold tracking-tight mb-6 leading-[1.15]">
+            <h2 className="font-display text-[clamp(22px,2.2vw,32px)] tracking-tight mb-6 leading-[1.15]">
               Hva gjorde vi?
             </h2>
             <div className="prose prose-lg max-w-none prose-headings:font-display prose-a:text-green-deep">
@@ -183,7 +183,7 @@ export default async function CaseStudyPage({ params }: Props) {
           <p className="text-[11px] font-medium tracking-[0.14em] uppercase text-green-light mb-4">
             Resultatene
           </p>
-          <h2 className="font-display text-[clamp(22px,2.2vw,32px)] font-extrabold tracking-tight mb-6 leading-[1.15]">
+          <h2 className="font-display text-[clamp(22px,2.2vw,32px)] tracking-tight mb-6 leading-[1.15]">
             Hva ble resultatet?
           </h2>
           <div className="prose prose-lg max-w-none prose-headings:font-display prose-a:text-green-deep">
@@ -214,7 +214,7 @@ export default async function CaseStudyPage({ params }: Props) {
       {/* ─── CTA ───────────────────────────────────────────────────── */}
       <section className="bg-green-pale py-20 px-6 md:px-12 xl:px-20">
         <div className="max-w-[640px]">
-          <h2 className="font-display text-[clamp(24px,2.5vw,36px)] font-extrabold tracking-[-0.012em] leading-[1.1] text-green-deep mb-4">
+          <h2 className="font-display text-[clamp(24px,2.5vw,36px)] tracking-[-0.012em] leading-[1.1] text-green-deep mb-4">
             Vil du se lignende resultater?
           </h2>
           <p className="text-[17px] font-light text-black/60 leading-[1.7] mb-8">

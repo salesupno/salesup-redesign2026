@@ -191,7 +191,7 @@ export default async function HomePage() {
           </div>
 
           {/* H1 */}
-          <h1 className="font-display text-[clamp(44px,5.5vw,72px)] font-extrabold leading-[1.05] tracking-[-0.018em] mb-7">
+          <h1 className="font-display text-[clamp(44px,5.5vw,72px)] leading-[1.05] tracking-[-0.018em] mb-7">
             {heroHeading}{' '}
             <em className="not-italic text-green-deep relative inline-block">
               {heroHeadingAccent}
@@ -244,7 +244,7 @@ export default async function HomePage() {
         <p className="text-[11px] font-medium tracking-[0.14em] uppercase text-green-light mb-4">
           Tjenester
         </p>
-        <h2 className="font-display text-[clamp(32px,3.5vw,52px)] font-extrabold tracking-[-0.012em] leading-[1.1] max-w-[660px] mb-5">
+        <h2 className="font-display text-[clamp(32px,3.5vw,52px)] tracking-[-0.012em] leading-[1.1] max-w-[660px] mb-5">
           Alt du trenger for aktiv organisk synlighet
         </h2>
         <p className="text-[18px] font-light text-muted max-w-[520px] leading-[1.7] mb-16">
@@ -295,7 +295,7 @@ export default async function HomePage() {
             <p className="text-[11px] font-medium tracking-[0.14em] uppercase text-green-light mb-4">
               Slik jobber vi
             </p>
-            <h2 className="font-display text-[clamp(32px,3.5vw,52px)] font-extrabold tracking-[-0.012em] leading-[1.1] mb-5">
+            <h2 className="font-display text-[clamp(32px,3.5vw,52px)] tracking-[-0.012em] leading-[1.1] mb-5">
               Aktiv synlighet er et system, ikke et stunt
             </h2>
             <p className="text-[18px] font-light text-muted leading-[1.7] mb-14">
@@ -365,7 +365,7 @@ export default async function HomePage() {
         <p className="text-[11px] font-medium tracking-[0.14em] uppercase text-green-glow mb-4">
           Hva kundene sier
         </p>
-        <h2 className="font-display text-[clamp(32px,3.5vw,52px)] font-extrabold tracking-[-0.012em] leading-[1.1] text-white max-w-[660px]">
+        <h2 className="font-display text-[clamp(32px,3.5vw,52px)] tracking-[-0.012em] leading-[1.1] text-white max-w-[660px]">
           Resultater som taler for seg
         </h2>
 
@@ -403,7 +403,7 @@ export default async function HomePage() {
             <p className="text-[11px] font-medium tracking-[0.14em] uppercase text-green-deep/60 mb-4">
               Kom i gang
             </p>
-            <h2 className="font-display text-[clamp(32px,3.5vw,52px)] font-extrabold tracking-[-0.012em] leading-[1.1] text-green-deep max-w-[600px]">
+            <h2 className="font-display text-[clamp(32px,3.5vw,52px)] tracking-[-0.012em] leading-[1.1] text-green-deep max-w-[600px]">
               Klar for synlighet som ikke forsvinner?
             </h2>
             <p className="text-[18px] font-light text-black/60 leading-[1.7] mt-5 max-w-[480px]">

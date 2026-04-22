@@ -139,7 +139,7 @@ export default async function PostPage({ params }: Props) {
           </span>
         )}
 
-        <h1 className="font-display text-[clamp(32px,4.5vw,58px)] font-extrabold leading-[1.08] tracking-[-0.018em] mb-8">
+        <h1 className="font-display text-[clamp(32px,4.5vw,58px)] leading-[1.08] tracking-[-0.018em] mb-8">
           {post.title}
         </h1>
 
@@ -232,7 +232,7 @@ export default async function PostPage({ params }: Props) {
           <p className="text-[11px] font-medium tracking-[0.14em] uppercase text-green-light mb-4">
             Vanlige spørsmål
           </p>
-          <h2 className="font-display text-[clamp(22px,2.2vw,32px)] font-extrabold tracking-[-0.012em] leading-[1.1] mb-8">
+          <h2 className="font-display text-[clamp(22px,2.2vw,32px)] tracking-[-0.012em] leading-[1.1] mb-8">
             Spørsmål knyttet til denne artikkelen
           </h2>
           <FAQWidget faqQuestions={post.faqQuestions} />
@@ -273,7 +273,7 @@ export default async function PostPage({ params }: Props) {
       {/* ─── AVSLUTNINGS-CTA ───────────────────────────────────────── */}
       <section className="bg-green-pale py-20 px-6 md:px-12 xl:px-20 mt-8">
         <div className="max-w-[640px]">
-          <h2 className="font-display text-[clamp(24px,2.5vw,36px)] font-extrabold tracking-[-0.012em] leading-[1.1] text-green-deep mb-4">
+          <h2 className="font-display text-[clamp(24px,2.5vw,36px)] tracking-[-0.012em] leading-[1.1] text-green-deep mb-4">
             Vil du ha hjelp til å implementere dette?
           </h2>
           <p className="text-[17px] font-light text-black/60 leading-[1.7] mb-8">

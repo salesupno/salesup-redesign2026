@@ -43,7 +43,7 @@ export default function KontaktPage() {
             <p className="text-[11px] font-medium tracking-[0.14em] uppercase text-green-light mb-4">
               Ta kontakt
             </p>
-            <h1 className="font-display text-[clamp(36px,4.5vw,60px)] font-extrabold leading-[1.05] tracking-[-0.018em] mb-6">
+            <h1 className="font-display text-[clamp(36px,4.5vw,60px)] leading-[1.05] tracking-[-0.018em] mb-6">
               La oss se på hva som er mulig for deg
             </h1>
             <p className="text-[17px] font-light text-muted leading-[1.75] mb-10 max-w-[480px]">

@@ -94,7 +94,7 @@ export default async function FAQPage() {
         <p className="text-[11px] font-medium tracking-[0.14em] uppercase text-green-light mb-4">
           Vanlige spørsmål
         </p>
-        <h1 className="font-display text-[clamp(40px,5vw,68px)] font-extrabold leading-[1.05] tracking-[-0.018em] max-w-[760px] mb-6">
+        <h1 className="font-display text-[clamp(40px,5vw,68px)] leading-[1.05] tracking-[-0.018em] max-w-[760px] mb-6">
           Svar på det du lurer på
         </h1>
         <p className="text-[18px] font-light text-muted leading-[1.7] max-w-[540px]">
@@ -148,7 +148,7 @@ export default async function FAQPage() {
       {/* ─── CTA ───────────────────────────────────────────────────── */}
       <section className="bg-green-pale py-20 px-6 md:px-12 xl:px-20">
         <div className="max-w-[640px]">
-          <h2 className="font-display text-[clamp(24px,2.5vw,36px)] font-extrabold tracking-[-0.012em] leading-[1.1] text-green-deep mb-4">
+          <h2 className="font-display text-[clamp(24px,2.5vw,36px)] tracking-[-0.012em] leading-[1.1] text-green-deep mb-4">
             Fant du ikke svaret du lette etter?
           </h2>
           <p className="text-[17px] font-light text-black/60 leading-[1.7] mb-8">

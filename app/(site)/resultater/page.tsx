@@ -103,7 +103,7 @@ export default async function ResultaterPage() {
         <p className="text-[11px] font-medium tracking-[0.14em] uppercase text-accent mb-4">
           Case / Resultater
         </p>
-        <h1 className="font-display text-[clamp(40px,5vw,68px)] font-extrabold leading-[1.05] tracking-[-0.018em] max-w-[760px] mb-6">
+        <h1 className="font-display text-[clamp(40px,5vw,68px)] leading-[1.05] tracking-[-0.018em] max-w-[760px] mb-6">
           Resultater vi faktisk kan stå inne for
         </h1>
         <p className="text-[18px] font-light text-white/60 leading-[1.7] max-w-[540px]">
@@ -175,7 +175,7 @@ export default async function ResultaterPage() {
       {/* ─── CTA ───────────────────────────────────────────────────── */}
       <section className="bg-green-pale py-20 px-6 md:px-12 xl:px-20">
         <div className="max-w-[640px]">
-          <h2 className="font-display text-[clamp(24px,2.5vw,36px)] font-extrabold tracking-[-0.012em] leading-[1.1] text-green-deep mb-4">
+          <h2 className="font-display text-[clamp(24px,2.5vw,36px)] tracking-[-0.012em] leading-[1.1] text-green-deep mb-4">
             Klar for å bli neste case?
           </h2>
           <p className="text-[17px] font-light text-black/60 leading-[1.7] mb-8">

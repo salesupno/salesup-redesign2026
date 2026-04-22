@@ -102,7 +102,7 @@ export default async function FAQQuestionPage({ params }: Props) {
           </span>
         )}
 
-        <h1 className="font-display text-[clamp(32px,4vw,56px)] font-extrabold leading-[1.08] tracking-[-0.018em] mb-8">
+        <h1 className="font-display text-[clamp(32px,4vw,56px)] leading-[1.08] tracking-[-0.018em] mb-8">
           {question.question}
         </h1>
 
@@ -187,7 +187,7 @@ export default async function FAQQuestionPage({ params }: Props) {
       {/* ─── AVSLUTNINGS-CTA ───────────────────────────────────────── */}
       <section className="bg-green-pale py-20 px-6 md:px-12 xl:px-20 mt-8">
         <div className="max-w-[640px]">
-          <h2 className="font-display text-[clamp(24px,2.5vw,36px)] font-extrabold tracking-[-0.012em] leading-[1.1] text-green-deep mb-4">
+          <h2 className="font-display text-[clamp(24px,2.5vw,36px)] tracking-[-0.012em] leading-[1.1] text-green-deep mb-4">
             Vil du se hva dette betyr for deg konkret?
           </h2>
           <p className="text-[17px] font-light text-black/60 leading-[1.7] mb-8">

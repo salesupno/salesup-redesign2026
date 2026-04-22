@@ -77,7 +77,7 @@ export default async function FaguttrykPage() {
         <p className="text-[11px] font-medium tracking-[0.14em] uppercase text-green-light mb-4">
           Faguttrykk
         </p>
-        <h1 className="font-display text-[clamp(40px,5vw,68px)] font-extrabold leading-[1.05] tracking-[-0.018em] max-w-[760px] mb-6">
+        <h1 className="font-display text-[clamp(40px,5vw,68px)] leading-[1.05] tracking-[-0.018em] max-w-[760px] mb-6">
           Alle faguttrykkene — fra A til Å
         </h1>
         <p className="text-[18px] font-light text-muted leading-[1.7] max-w-[540px]">
@@ -104,7 +104,7 @@ export default async function FaguttrykPage() {
       <section className="px-6 md:px-12 xl:px-20 py-16">
         {sortedLetters.map((letter) => (
           <div key={letter} id={letter} className="mb-12 scroll-mt-24">
-            <h2 className="font-display text-[32px] font-extrabold text-green-deep/20 mb-6 border-b border-black/8 pb-2">
+            <h2 className="font-display text-[32px] text-green-deep/20 mb-6 border-b border-black/8 pb-2">
               {letter}
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3">

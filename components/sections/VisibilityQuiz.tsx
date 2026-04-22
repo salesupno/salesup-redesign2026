@@ -102,7 +102,7 @@ export function VisibilityQuiz({ urgencyText }: UrgencyProps) {
           <p className="text-[11px] font-medium tracking-[0.14em] uppercase text-green-light mb-4">
             2-minutters sjekk
           </p>
-          <h2 className="font-display text-[clamp(28px,3.5vw,44px)] font-extrabold tracking-[-0.012em] leading-[1.1] mb-4">
+          <h2 className="font-display text-[clamp(28px,3.5vw,44px)] tracking-[-0.012em] leading-[1.1] mb-4">
             Sjekk hvor synlig bedriften din er i dag
           </h2>
           <p className="text-[17px] font-light text-muted leading-[1.7]">
@@ -175,7 +175,7 @@ export function VisibilityQuiz({ urgencyText }: UrgencyProps) {
                     <path d="M5 13l4 4L19 7" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </div>
-                <h3 className="font-display text-[clamp(20px,2.5vw,30px)] font-extrabold tracking-tight mb-4 leading-snug">
+                <h3 className="font-display text-[clamp(20px,2.5vw,30px)] tracking-tight mb-4 leading-snug">
                   Vi har sett nok.
                 </h3>
                 <p className="text-[16px] font-light text-muted leading-[1.7] mb-8 max-w-[440px] mx-auto">

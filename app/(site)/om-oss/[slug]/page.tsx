@@ -156,7 +156,7 @@ export default async function TeamMemberPage({ params }: Props) {
             <p className="text-[13px] font-medium text-green-light uppercase tracking-widest mb-3">
               {member.title}
             </p>
-            <h1 className="font-display text-[clamp(36px,4.5vw,64px)] font-extrabold leading-[1.05] tracking-[-0.018em] mb-6">
+            <h1 className="font-display text-[clamp(36px,4.5vw,64px)] leading-[1.05] tracking-[-0.018em] mb-6">
               {member.name}
             </h1>
 

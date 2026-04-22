@@ -19,7 +19,7 @@ export default function PersonvernPage() {
       </nav>
 
       <div className="max-w-[760px]">
-        <h1 className="font-display text-[clamp(32px,4vw,52px)] font-extrabold leading-[1.08] tracking-[-0.018em] mb-6">
+        <h1 className="font-display text-[clamp(32px,4vw,52px)] leading-[1.08] tracking-[-0.018em] mb-6">
           Personvernerklæring
         </h1>
         <p className="text-[15px] text-muted mb-10">Sist oppdatert: april 2026</p>
