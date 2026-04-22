@@ -29,6 +29,27 @@ export const product = defineType({
     defineField({ name: 'description', title: 'Produktbeskrivelse (ingress)', type: 'text', rows: 4 }),
     defineField({ name: 'externalUrl', title: 'Ekstern URL', type: 'url', description: 'For seo-tracker.com og mynk.no' }),
     defineField({
+      name: 'mainImage',
+      title: 'Hovedbilde (hero)',
+      type: 'image',
+      options: { hotspot: true },
+      description: 'Vises i hero-seksjonen på produktsiden. Anbefalt: 1200×675px.',
+    }),
+    defineField({
+      name: 'screenshots',
+      title: 'Skjermbilder / Produktbilder',
+      type: 'array',
+      of: [{
+        type: 'image',
+        options: { hotspot: true },
+        fields: [
+          defineField({ name: 'caption', title: 'Bildetekst', type: 'string' }),
+          defineField({ name: 'alt', title: 'Alt-tekst', type: 'string' }),
+        ],
+      }],
+      description: 'Vises i et galleri under features.',
+    }),
+    defineField({
       name: 'features',
       title: 'Nøkkelfunksjoner',
       type: 'array',

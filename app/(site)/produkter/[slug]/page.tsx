@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
 import { client } from '@/sanity/lib/client'
@@ -9,6 +10,12 @@ export const revalidate = 3600
 
 interface Props {
   params: Promise<{ slug: string }>
+}
+
+interface SanityImage {
+  asset: { _id: string; url: string; metadata: { dimensions: { width: number; height: number } } }
+  alt?: string
+  caption?: string
 }
 
 interface Product {
@@ -23,6 +30,8 @@ interface Product {
   externalUrl?: string
   features?: { title: string; description: string }[]
   body?: unknown[]
+  mainImage?: SanityImage
+  screenshots?: SanityImage[]
   metaTitle?: string
   metaDescription?: string
 }
@@ -183,6 +192,20 @@ export default async function ProduktPage({ params }: Props) {
               Spør oss om dette produktet
             </Link>
           </div>
+
+          {/* Hovedbilde */}
+          {product.mainImage?.asset?.url && (
+            <div className="mt-14 rounded-2xl overflow-hidden border border-white/8 shadow-2xl">
+              <Image
+                src={product.mainImage.asset.url}
+                alt={product.mainImage.alt || product.title}
+                width={product.mainImage.asset.metadata.dimensions.width}
+                height={product.mainImage.asset.metadata.dimensions.height}
+                className="w-full h-auto object-cover"
+                priority
+              />
+            </div>
+          )}
         </div>
       </section>
 
@@ -237,6 +260,34 @@ export default async function ProduktPage({ params }: Props) {
         <section className="bg-cream py-24 px-6">
           <div className="max-w-3xl mx-auto prose prose-lg">
             <PortableText value={product.body as never} components={portableComponents as never} />
+          </div>
+        </section>
+      )}
+
+      {/* ─── Screenshots-galleri ──────────────────────────────────────── */}
+      {product.screenshots && product.screenshots.length > 0 && (
+        <section className="bg-white py-24 px-6">
+          <div className="max-w-6xl mx-auto">
+            <div className="mb-12">
+              <p className="text-xs font-semibold tracking-widest uppercase text-muted mb-2">I praksis</p>
+              <h2 className="font-display text-4xl text-black tracking-tight">Se produktet i bruk</h2>
+            </div>
+            <div className="grid sm:grid-cols-2 gap-6">
+              {product.screenshots.map((img, i) => (
+                <figure key={img.asset._id} className="rounded-2xl overflow-hidden border border-black/8 bg-cream">
+                  <Image
+                    src={img.asset.url}
+                    alt={img.alt || `${product.title} skjermbilde ${i + 1}`}
+                    width={img.asset.metadata.dimensions.width}
+                    height={img.asset.metadata.dimensions.height}
+                    className="w-full h-auto object-cover"
+                  />
+                  {img.caption && (
+                    <figcaption className="px-5 py-3 text-[13px] text-muted">{img.caption}</figcaption>
+                  )}
+                </figure>
+              ))}
+            </div>
           </div>
         </section>
       )}

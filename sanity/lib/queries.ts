@@ -330,6 +330,8 @@ export const productBySlugQuery = groq`
     externalUrl,
     features[] { title, description },
     body,
+    mainImage { asset->{ _id, url, metadata { dimensions } }, hotspot, crop, alt },
+    screenshots[] { asset->{ _id, url, metadata { dimensions } }, hotspot, crop, alt, caption },
     metaTitle,
     metaDescription
   }
