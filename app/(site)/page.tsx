@@ -120,7 +120,7 @@ const fallbackProcessSteps = [
 
 const fallbackMetrics = [
   { value: '100+', label: 'kunder hjulpet' },
-  { value: '20 år', label: 'SEO-erfaring' },
+  { value: '12 år', label: 'SEO-erfaring' },
   { value: '5× ROAS', label: 'dokumentert snitt' },
 ]
 
