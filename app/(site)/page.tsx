@@ -360,6 +360,38 @@ export default async function HomePage() {
       {/* ─── SYNLIGHETSSJEKK-QUIZ ────────────────────────────────────────────── */}
       <VisibilityQuiz urgencyText={urgencyText} />
 
+      {/* ─── NETTSIDEUTKAST TEASER ───────────────────────────────────────────── */}
+      <section className="bg-green-deep py-24 xl:py-28 px-6 md:px-12 xl:px-20">
+        <div className="max-w-[1280px] mx-auto flex flex-col xl:flex-row xl:items-center xl:justify-between gap-12">
+          <div className="max-w-[580px]">
+            <p className="text-[11px] font-bold tracking-[0.18em] uppercase text-accent mb-4">
+              Gratis verktøy
+            </p>
+            <h2 className="font-display text-[clamp(28px,3.5vw,48px)] tracking-[-0.012em] leading-[1.1] text-white mb-5">
+              Se nettsiden konkurrentene dine ønsker de hadde
+            </h2>
+            <p className="text-[17px] font-light text-white/65 leading-[1.7] mb-3">
+              Vi analyserer topp&nbsp;10 i din bransje og sender deg et skreddersydd nettsidekonsept
+              — med seksjonsstruktur, CTA-strategi og designretning. Gratis.
+            </p>
+            <div className="flex flex-wrap gap-x-5 gap-y-1 text-[12px] text-white/45 font-medium">
+              <span>✓ Ingen kredittkort</span>
+              <span>✓ Svar innen 24 timer</span>
+              <span>✓ Brukt av 200+ bedrifter</span>
+            </div>
+          </div>
+          <div className="shrink-0 flex flex-col gap-4">
+            <Link
+              href="/nettsideutkast"
+              className="inline-flex items-center justify-center gap-2 bg-accent text-black font-semibold text-[15px] rounded-xl px-8 py-4 hover:bg-accent-dark transition-colors"
+            >
+              Lag mitt gratis utkast →
+            </Link>
+            <p className="text-[12px] text-white/35 text-center">Tar 60 sekunder</p>
+          </div>
+        </div>
+      </section>
+
       {/* ─── TESTIMONIALS ──────────────────────────────────────────────────── */}
       <section className="bg-black py-24 xl:py-28 px-6 md:px-12 xl:px-20">
         <p className="text-[11px] font-medium tracking-[0.14em] uppercase text-green-glow mb-4">
