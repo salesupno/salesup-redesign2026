@@ -178,23 +178,28 @@ export default async function HomePage() {
   return (
     <>
       {/* ─── HERO ──────────────────────────────────────────────────────────── */}
-      <section className="min-h-screen grid xl:grid-cols-2 pt-16 bg-white">
+      <section className="min-h-screen grid xl:grid-cols-2 pt-16">
         {/* Venstre */}
         <div className="flex flex-col justify-center px-6 md:px-12 xl:px-20 py-20 xl:py-28">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-green-pale/60 border border-green-deep/12 rounded-full px-3.5 py-1.5 text-[12px] font-semibold text-green-deep mb-9 w-fit">
+          <div className="inline-flex items-center gap-2 bg-cream border border-black/10 rounded-full px-3.5 py-1.5 text-[12px] font-medium text-green-deep mb-9 w-fit">
             <span
-              className="w-1.5 h-1.5 rounded-full bg-green-deep animate-[pulse-dot_2s_ease-in-out_infinite]"
+              className="w-1.5 h-1.5 rounded-full bg-green-light animate-[pulse-dot_2s_ease-in-out_infinite]"
               aria-hidden="true"
             />
             {heroBadge}
           </div>
 
           {/* H1 */}
-          <h1 className="font-display text-[clamp(44px,5.5vw,72px)] font-extrabold leading-[1.0] tracking-[-0.025em] mb-7">
-            {heroHeading}
-            <br />
-            <span className="text-green-deep">{heroHeadingAccent}</span>
+          <h1 className="font-display text-[clamp(44px,5.5vw,72px)] leading-[1.05] tracking-[-0.018em] mb-7">
+            {heroHeading}{' '}
+            <em className="not-italic text-green-deep relative inline-block">
+              {heroHeadingAccent}
+              <span
+                className="absolute left-0 right-0 bottom-1 h-[3px] rounded-sm bg-accent"
+                aria-hidden="true"
+              />
+            </em>
           </h1>
 
           {/* Ingress */}
@@ -219,7 +224,7 @@ export default async function HomePage() {
           <div className="flex flex-wrap gap-10 mt-16 pt-10 border-t border-black/10">
             {metrics.map((m) => (
               <div key={m.label}>
-                <div className="font-display text-[36px] font-bold tracking-[-0.02em] text-black leading-none">
+                <div className="font-display text-[36px] font-extrabold tracking-[-0.012em] text-green-deep leading-none">
                   {m.value}
                 </div>
                 <div className="text-[13px] text-muted mt-1">{m.label}</div>
@@ -229,83 +234,13 @@ export default async function HomePage() {
         </div>
 
         {/* Høyre — AI Citation Feed */}
-        <div className="hidden xl:flex flex-col justify-center bg-cream border-l border-black/8 overflow-hidden">
+        <div className="hidden xl:flex flex-col justify-center bg-white border-l border-black/8 overflow-hidden">
           <AICitationFeed seedCitations={citations} />
         </div>
       </section>
 
-      {/* ─── TRUST STRIP ───────────────────────────────────────────────────── */}
-      <section className="bg-black py-9 px-6 md:px-12 xl:px-20">
-        <div className="max-w-[1280px] mx-auto">
-          <p className="text-[11px] font-medium tracking-[0.14em] uppercase text-white/30 mb-6 text-center">
-            Pålitelig valg for selskaper som ønsker å vokse
-          </p>
-          <div className="flex flex-wrap justify-center gap-x-10 gap-y-3 items-center">
-            {['Smart Varme', 'First Camp', 'Norweh', 'Ditt Uterom', 'Dyreparken'].map((name) => (
-              <span
-                key={name}
-                className="font-display font-semibold text-[15px] text-white/25 uppercase tracking-[0.06em]"
-              >
-                {name}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ─── VEKST SOM MERKES ──────────────────────────────────────────────── */}
-      <section className="bg-cream py-24 xl:py-28 px-6 md:px-12 xl:px-20">
-        <div className="max-w-[1280px] mx-auto">
-          <p className="text-[11px] font-medium tracking-[0.14em] uppercase text-green-light mb-4">
-            Hvorfor velge oss
-          </p>
-          <h2 className="font-display text-[clamp(32px,3.5vw,52px)] tracking-[-0.012em] leading-[1.1] max-w-[640px] mb-16">
-            Vekst som merkes
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              {
-                title: 'Du trenger ikke alltid øke budsjettet',
-                desc: 'Organisk synlighet gir vedvarende trafikk uten at kostnadene øker tilsvarende. Vi bygger kanaler som jobber for deg 24/7.',
-                icon: (
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                    <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
-                  </svg>
-                ),
-              },
-              {
-                title: 'Mer kvalifisert trafikk gir flere kjøp',
-                desc: 'Vi tiltrekker besøkende som faktisk leter etter det du tilbyr. Resultatet er høyere konverteringsrate og bedre avkastning.',
-                icon: (
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                    <path d="m3 3 7.07 16.97 2.51-7.39 7.39-2.51z"/><path d="m13 13 6 6"/>
-                  </svg>
-                ),
-              },
-              {
-                title: 'Du ser nøyaktig hva som virker',
-                desc: 'Klare rapporter på rangeringer, trafikk og faktiske leads — ikke aktivitetsrapporter fylt med tomme metrikker.',
-                icon: (
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                    <line x1="18" x2="18" y1="20" y2="10"/><line x1="12" x2="12" y1="20" y2="4"/><line x1="6" x2="6" y1="20" y2="14"/>
-                  </svg>
-                ),
-              },
-            ].map((card) => (
-              <div key={card.title} className="bg-white rounded-2xl p-9">
-                <div className="w-12 h-12 rounded-full bg-green-pale flex items-center justify-center text-green-deep mb-6">
-                  {card.icon}
-                </div>
-                <h3 className="font-display text-[20px] font-bold tracking-tight mb-3">{card.title}</h3>
-                <p className="text-[15px] text-muted leading-relaxed">{card.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ─── TJENESTER ─────────────────────────────────────────────────────── */}
-      <section className="bg-white py-24 xl:py-28 px-6 md:px-12 xl:px-20">
+      <section className="bg-cream py-24 xl:py-28 px-6 md:px-12 xl:px-20">
         <p className="text-[11px] font-medium tracking-[0.14em] uppercase text-green-light mb-4">
           Tjenester
         </p>
@@ -327,7 +262,7 @@ export default async function HomePage() {
               href={`/tjenester/${s.slug}`}
               className="group bg-white hover:bg-[#F0EDE4] px-10 py-11 transition-colors block"
             >
-              <div className="w-12 h-12 rounded-2xl bg-green-deep flex items-center justify-center mb-7 font-display font-extrabold text-[13px] text-white tracking-tight">
+              <div className="w-12 h-12 rounded-2xl bg-green-deep flex items-center justify-center mb-7 font-display font-extrabold text-[13px] text-accent tracking-tight">
                 {s.shortCode}
               </div>
               <h3 className="font-display text-[22px] font-bold tracking-tight mb-3">

@@ -40,7 +40,7 @@
   --color-subtle:       var(--color-text-subtle);
 
   /* Fonts */
-  --font-display: var(--font-syne), system-ui, sans-serif;
+  --font-display: var(--font-fraunces), Georgia, serif;
   --font-body:    var(--font-dm-sans), sans-serif;
 
   /* Letter spacing */
