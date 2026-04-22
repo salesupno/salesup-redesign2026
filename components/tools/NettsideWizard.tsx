@@ -113,8 +113,7 @@ export function NettsideWizard() {
       </div>
 
       {/* ─── Progress-indikator ───────────────────────────────── */}
-      {
-        <div className="flex items-center gap-0 mb-10 w-full max-w-lg">
+      <div className="flex items-center gap-0 mb-10 w-full max-w-lg">
           {STEP_LABELS.map((label, i) => {
             const num = i + 1
             const active = step === num
@@ -144,8 +143,7 @@ export function NettsideWizard() {
               </div>
             )
           })}
-        </div>
-      )}
+      </div>
 
       {/* ─── Step 1: Bransje ─────────────────────────────────── */}
       {step === 1 && (
@@ -158,7 +156,7 @@ export function NettsideWizard() {
             {INDUSTRIES.map(ind => (
               <button
                 key={ind.id}
-                onClick={() => set('industry', ind.id) || set('industryLabel', ind.label)}
+                onClick={() => { set('industry', ind.id); set('industryLabel', ind.label) }}
                 className={clsx(
                   'group flex flex-col items-center gap-3 py-5 px-3 rounded-2xl border-2 text-center transition-all',
                   form.industry === ind.id
