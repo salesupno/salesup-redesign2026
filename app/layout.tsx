@@ -1,20 +1,13 @@
 import type { Metadata } from 'next'
-import { Fraunces, DM_Sans } from 'next/font/google'
+import { Plus_Jakarta_Sans } from 'next/font/google'
 import Script from 'next/script'
 import './globals.css'
 
-const fraunces = Fraunces({
+const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ['latin'],
-  axes: ['opsz', 'SOFT', 'WONK'],
-  variable: '--font-fraunces',
-  display: 'swap',
-})
-
-const dmSans = DM_Sans({
-  subsets: ['latin'],
-  weight: ['300', '400', '500'],
+  weight: ['300', '400', '500', '600', '700', '800'],
   style: ['normal', 'italic'],
-  variable: '--font-dm-sans',
+  variable: '--font-plus-jakarta',
   display: 'swap',
 })
 
@@ -33,6 +26,9 @@ export const metadata: Metadata = {
     images: [{ url: '/og-image.png', width: 1200, height: 630 }],
   },
   twitter: { card: 'summary_large_image' },
+  icons: {
+    icon: 'https://salesup.no/wp-content/uploads/2025/01/cropped-Asset-1-32x32.png',
+  },
   robots: { index: true, follow: true },
   alternates: { canonical: 'https://salesup.no' },
 }
@@ -71,7 +67,7 @@ export default function RootLayout({
   return (
     <html
       lang="nb"
-      className={`${fraunces.variable} ${dmSans.variable} h-full`}
+      className={`${plusJakartaSans.variable} h-full`}
     >
       <body className="min-h-full flex flex-col">
         {children}
