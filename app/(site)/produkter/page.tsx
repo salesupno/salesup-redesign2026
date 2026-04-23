@@ -72,7 +72,7 @@ export default async function ProdukterPage() {
 
       {/* ─── Hero ──────────────────────────────────────────────────────── */}
       <section className="bg-black pt-32 pb-24 px-6">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-[1200px] mx-auto">
           <div className="inline-flex items-center gap-2 bg-white/8 border border-white/12 rounded-full px-4 py-1.5 mb-8">
             <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
             <span className="text-white/70 text-sm tracking-widest uppercase font-medium">Produkter</span>
@@ -90,7 +90,7 @@ export default async function ProdukterPage() {
       {/* ─── SaaS-produkter ────────────────────────────────────────────── */}
       {saas.length > 0 && (
         <section className="bg-cream py-24 px-6">
-          <div className="max-w-6xl mx-auto">
+          <div className="max-w-[1200px] mx-auto">
             <div className="mb-14">
               <p className="text-xs font-semibold tracking-widest uppercase text-muted mb-2">SaaS-verktøy</p>
               <h2 className="font-display text-4xl text-black tracking-tight">Egne plattformer</h2>
@@ -107,7 +107,7 @@ export default async function ProdukterPage() {
       {/* ─── WordPress-plugins ─────────────────────────────────────────── */}
       {wpPlugins.length > 0 && (
         <section className="bg-white py-24 px-6">
-          <div className="max-w-6xl mx-auto">
+          <div className="max-w-[1200px] mx-auto">
             <div className="mb-14">
               <p className="text-xs font-semibold tracking-widest uppercase text-muted mb-2">WordPress-plugins</p>
               <h2 className="font-display text-4xl text-black tracking-tight">SEO-maskineri for WordPress</h2>
@@ -127,7 +127,7 @@ export default async function ProdukterPage() {
       {/* ─── Shopify-apps ──────────────────────────────────────────────── */}
       {shopify.length > 0 && (
         <section className="bg-cream py-24 px-6">
-          <div className="max-w-6xl mx-auto">
+          <div className="max-w-[1200px] mx-auto">
             <div className="mb-14">
               <p className="text-xs font-semibold tracking-widest uppercase text-muted mb-2">Shopify-apper</p>
               <h2 className="font-display text-4xl text-black tracking-tight">For nettbutikker</h2>

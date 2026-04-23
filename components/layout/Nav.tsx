@@ -159,7 +159,7 @@ export function Nav({ navLinks, navCTA }: NavProps) {
         scrolled ? 'shadow-sm' : 'shadow-none'
       )}
     >
-      <div className="max-w-[1280px] mx-auto px-6 md:px-12 xl:px-20 h-full flex items-center justify-between">
+      <div className="max-w-[1200px] mx-auto px-6 h-full flex items-center justify-between">
         {/* Logo */}
         <Logo variant="dark" width={120} />
 

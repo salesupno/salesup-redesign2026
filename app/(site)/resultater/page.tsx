@@ -91,7 +91,8 @@ export default async function ResultaterPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       {/* ─── HERO ──────────────────────────────────────────────────── */}
-      <section className="pt-32 pb-16 px-6 md:px-12 xl:px-20 bg-black text-white">
+      <section className="pt-32 pb-16 bg-black text-white">
+        <div className="sc">
         <nav aria-label="Brødsmulesti" className="mb-10">
           <ol className="flex items-center gap-2 text-[13px] text-white/40">
             <li><Link href="/" className="hover:text-white transition-colors">Forside</Link></li>
@@ -109,10 +110,12 @@ export default async function ResultaterPage() {
         <p className="text-[18px] font-light text-white/60 leading-[1.7] max-w-[540px]">
           Ingen vage løfter. Her er hva vi har levert — med tall, tidsrammer og ærlige forklaringer.
         </p>
+        </div>
       </section>
 
       {/* ─── CASES ─────────────────────────────────────────────────── */}
-      <section className="px-6 md:px-12 xl:px-20 py-16">
+      <section className="py-16">
+        <div className="sc">
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-7">
           {all.map((c) => (
             <Link
@@ -170,10 +173,12 @@ export default async function ResultaterPage() {
             </Link>
           ))}
         </div>
+        </div>
       </section>
 
       {/* ─── CTA ───────────────────────────────────────────────────── */}
-      <section className="bg-green-pale py-20 px-6 md:px-12 xl:px-20">
+      <section className="bg-green-pale py-20">
+        <div className="sc">
         <div className="max-w-[640px]">
           <h2 className="font-display text-[clamp(24px,2.5vw,36px)] tracking-[-0.012em] leading-[1.1] text-green-deep mb-4">
             Klar for å bli neste case?
@@ -195,6 +200,7 @@ export default async function ResultaterPage() {
               Se hva vi tilbyr →
             </Link>
           </div>
+        </div>
         </div>
       </section>
     </>

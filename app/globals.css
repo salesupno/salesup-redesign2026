@@ -50,6 +50,16 @@
   --letter-spacing-caps:     0.14em;
 }
 
+/* ─── Site container ────────────────────────────────────────── */
+
+.sc {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
 /* ─── Base styles ────────────────────────────────────────────── */
 
 *, *::before, *::after {

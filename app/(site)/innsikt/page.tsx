@@ -78,7 +78,8 @@ export default async function InnsiktPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       {/* ─── HERO ──────────────────────────────────────────────────── */}
-      <section className="pt-32 pb-16 px-6 md:px-12 xl:px-20 bg-cream">
+      <section className="pt-32 pb-16 bg-cream">
+        <div className="sc">
         <nav aria-label="Brødsmulesti" className="mb-10">
           <ol className="flex items-center gap-2 text-[13px] text-muted">
             <li><Link href="/" className="hover:text-green-deep transition-colors">Forside</Link></li>
@@ -97,9 +98,11 @@ export default async function InnsiktPage() {
           Guider, analyser og perspektiver på SEO, AEO, GEO og konverteringsoptimalisering.
           Skrevet av folk som faktisk gjør dette til daglig.
         </p>
+        </div>
       </section>
 
-      <section className="px-6 md:px-12 xl:px-20 py-16">
+      <section className="py-16">
+        <div className="sc">
         {/* ─── FEATURED ──────────────────────────────────────────── */}
         {featured && (
           <Link
@@ -222,6 +225,7 @@ export default async function InnsiktPage() {
             ))}
           </div>
         )}
+        </div>
       </section>
     </>
   )

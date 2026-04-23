@@ -52,7 +52,8 @@ export default async function TjenesterPage() {
       />
 
       {/* ─── HERO ──────────────────────────────────────────────────────── */}
-      <section className="pt-32 pb-20 px-6 md:px-12 xl:px-20 bg-cream">
+      <section className="pt-32 pb-20 bg-cream">
+        <div className="sc">
         {/* Brødsmule */}
         <nav aria-label="Brødsmulesti" className="mb-10">
           <ol className="flex items-center gap-2 text-[13px] text-muted">
@@ -73,16 +74,18 @@ export default async function TjenesterPage() {
           alt koordinert som én strategi.
         </p>
         <Button href="/kontakt" variant="primary">Få gratis synlighetsanalyse →</Button>
+        </div>
       </section>
 
       {/* ─── TJENESTELISTE ─────────────────────────────────────────────── */}
-      <section className="px-6 md:px-12 xl:px-20 py-20">
+      <section className="py-20">
+        <div className="sc">
         <div className="flex flex-col divide-y divide-black/8">
           {services.map((s, i) => (
             <Link
               key={s._id}
               href={`/tjenester/${s.slug}`}
-              className="group grid md:grid-cols-[80px_1fr_auto] gap-6 md:gap-10 py-10 hover:bg-cream/50 -mx-6 md:-mx-12 xl:-mx-20 px-6 md:px-12 xl:px-20 transition-colors"
+              className="group grid md:grid-cols-[80px_1fr_auto] gap-6 md:gap-10 py-10 hover:bg-cream/50 -mx-6 px-6 transition-colors"
             >
               <div className="text-[13px] font-medium text-muted pt-1">0{i + 1}</div>
               <div>
@@ -120,11 +123,12 @@ export default async function TjenesterPage() {
             </Link>
           ))}
         </div>
+        </div>
       </section>
 
       {/* ─── GLOBAL CTA ────────────────────────────────────────────────── */}
-      <section className="bg-green-pale py-24 px-6 md:px-12 xl:px-20">
-        <div className="max-w-[1280px] mx-auto flex flex-col xl:flex-row xl:items-center xl:justify-between gap-10">
+      <section className="bg-green-pale py-24">
+        <div className="max-w-[1200px] mx-auto px-6 flex flex-col xl:flex-row xl:items-center xl:justify-between gap-10">
           <div>
             <h2 className="font-display text-[clamp(28px,3vw,44px)] tracking-[-0.012em] leading-[1.1] text-green-deep max-w-[540px]">
               Ikke sikker på hva du trenger?

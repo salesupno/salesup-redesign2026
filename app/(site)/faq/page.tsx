@@ -83,7 +83,8 @@ export default async function FAQPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       {/* ─── HERO ──────────────────────────────────────────────────── */}
-      <section className="pt-32 pb-16 px-6 md:px-12 xl:px-20 bg-cream">
+      <section className="pt-32 pb-16 bg-cream">
+        <div className="sc">
         <nav aria-label="Brødsmulesti" className="mb-10">
           <ol className="flex items-center gap-2 text-[13px] text-muted">
             <li><Link href="/" className="hover:text-green-deep transition-colors">Forside</Link></li>
@@ -101,10 +102,12 @@ export default async function FAQPage() {
           Grundige svar på de vanligste spørsmålene om SEO, AEO, GEO og digital synlighet — skrevet
           av folk som faktisk gjør dette til daglig.
         </p>
+        </div>
       </section>
 
       {/* ─── FAQ ETTER KATEGORI ────────────────────────────────────── */}
-      <section className="px-6 md:px-12 xl:px-20 py-20 max-w-[900px]">
+      <section className="py-20">
+        <div className="sc">
         {Object.entries(grouped).map(([category, qs]) => (
           <div key={category} className="mb-16">
             <div className="flex items-center gap-3 mb-8">
@@ -143,10 +146,12 @@ export default async function FAQPage() {
             </div>
           </div>
         ))}
+        </div>
       </section>
 
       {/* ─── CTA ───────────────────────────────────────────────────── */}
-      <section className="bg-green-pale py-20 px-6 md:px-12 xl:px-20">
+      <section className="bg-green-pale py-20">
+        <div className="sc">
         <div className="max-w-[640px]">
           <h2 className="font-display text-[clamp(24px,2.5vw,36px)] tracking-[-0.012em] leading-[1.1] text-green-deep mb-4">
             Fant du ikke svaret du lette etter?
@@ -162,6 +167,7 @@ export default async function FAQPage() {
               Ta kontakt →
             </Link>
           </div>
+        </div>
         </div>
       </section>
     </>

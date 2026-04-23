@@ -66,7 +66,8 @@ export default async function OmOssPage() {
       />
 
       {/* ─── HERO ──────────────────────────────────────────────────── */}
-      <section className="pt-32 pb-20 px-6 md:px-12 xl:px-20 bg-cream">
+      <section className="pt-32 pb-20 bg-cream">
+        <div className="sc">
         <nav aria-label="Brødsmulesti" className="mb-10">
           <ol className="flex items-center gap-2 text-[13px] text-muted">
             <li><Link href="/" className="hover:text-green-deep transition-colors">Forside</Link></li>
@@ -85,10 +86,12 @@ export default async function OmOssPage() {
           Vi er et lite, spesialisert team med dyp fagkunnskap og én klar ambisjon: hjelpe norske
           bedrifter å bli synlige der kundene faktisk søker — i dag og i fremtiden.
         </p>
+        </div>
       </section>
 
       {/* ─── VERDIER ───────────────────────────────────────────────── */}
-      <section className="px-6 md:px-12 xl:px-20 py-20 border-b border-black/8">
+      <section className="py-20 border-b border-black/8">
+        <div className="sc">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {[
             { num: '01', title: 'Ærlighet fremfor salg', body: 'Vi anbefaler kun det som faktisk gir effekt for din situasjon — ikke det som genererer størst honorar for oss.' },
@@ -102,10 +105,12 @@ export default async function OmOssPage() {
             </div>
           ))}
         </div>
+        </div>
       </section>
 
       {/* ─── TEAMGRID ──────────────────────────────────────────────── */}
-      <section className="px-6 md:px-12 xl:px-20 py-20">
+      <section className="py-20">
+        <div className="sc">
         <p className="text-[11px] font-medium tracking-[0.14em] uppercase text-green-light mb-4">
           Teamet
         </p>
@@ -165,11 +170,12 @@ export default async function OmOssPage() {
             </Link>
           ))}
         </div>
+        </div>
       </section>
 
       {/* ─── CTA ───────────────────────────────────────────────────── */}
-      <section className="bg-green-pale py-24 px-6 md:px-12 xl:px-20">
-        <div className="max-w-[1280px] mx-auto flex flex-col xl:flex-row xl:items-center xl:justify-between gap-10">
+      <section className="bg-green-pale py-24">
+        <div className="max-w-[1200px] mx-auto px-6 flex flex-col xl:flex-row xl:items-center xl:justify-between gap-10">
           <div>
             <h2 className="font-display text-[clamp(28px,3vw,44px)] tracking-[-0.012em] leading-[1.1] text-green-deep max-w-[540px]">
               Bli kjent med oss — uten forpliktelser

@@ -48,7 +48,7 @@ export function ROICalculator({ urgencyText }: ROICalculatorProps) {
   ]
 
   return (
-    <section className="bg-black py-20 px-6 md:px-12 xl:px-20">
+    <section className="bg-black py-20 px-6">
       <div className="max-w-[900px] mx-auto">
         {/* Header */}
         <div className="mb-12">

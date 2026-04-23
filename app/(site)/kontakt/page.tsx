@@ -28,7 +28,8 @@ export default function KontaktPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
-      <section className="pt-32 pb-16 px-6 md:px-12 xl:px-20">
+      <section className="pt-32 pb-16">
+        <div className="sc">
         <nav aria-label="Brødsmulesti" className="mb-10">
           <ol className="flex items-center gap-2 text-[13px] text-muted">
             <li><Link href="/" className="hover:text-green-deep transition-colors">Forside</Link></li>
@@ -103,6 +104,7 @@ export default function KontaktPage() {
             </p>
             <ContactForm />
           </div>
+        </div>
         </div>
       </section>
     </>

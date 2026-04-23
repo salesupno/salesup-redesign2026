@@ -94,7 +94,8 @@ export default async function TjenestePage({ params }: Props) {
       )}
 
       {/* ─── HERO ──────────────────────────────────────────────────── */}
-      <section className="pt-32 pb-20 px-6 md:px-12 xl:px-20 bg-cream">
+      <section className="pt-32 pb-20 bg-cream">
+        <div className="sc">
         {/* Brødsmule */}
         <nav aria-label="Brødsmulesti" className="mb-10">
           <ol className="flex items-center gap-2 text-[13px] text-muted">
@@ -129,11 +130,13 @@ export default async function TjenestePage({ params }: Props) {
           <Button href="/kontakt" variant="primary">Få gratis analyse →</Button>
           <Button href="/resultater" variant="ghost">Se resultater</Button>
         </div>
+        </div>
       </section>
 
       {/* ─── LEVERANSER ────────────────────────────────────────────── */}
       {service.deliverables?.length > 0 && (
-        <section className="px-6 md:px-12 xl:px-20 py-20">
+        <section className="py-20">
+          <div className="sc">
           <p className="text-[11px] font-medium tracking-[0.14em] uppercase text-green-light mb-4">Hva du får</p>
           <h2 className="font-display text-[clamp(28px,3vw,42px)] tracking-[-0.012em] leading-[1.1] max-w-[600px] mb-12">
             Konkrete leveranser — ikke vage løfter
@@ -151,12 +154,14 @@ export default async function TjenestePage({ params }: Props) {
               </div>
             ))}
           </div>
+          </div>
         </section>
       )}
 
       {/* ─── PROSESS ───────────────────────────────────────────────── */}
       {service.processSteps?.length > 0 && (
-        <section className="bg-cream px-6 md:px-12 xl:px-20 py-20">
+        <section className="bg-cream py-20">
+          <div className="sc">
           <p className="text-[11px] font-medium tracking-[0.14em] uppercase text-green-light mb-4">Slik jobber vi</p>
           <h2 className="font-display text-[clamp(28px,3vw,42px)] tracking-[-0.012em] leading-[1.1] max-w-[600px] mb-12">
             Vår prosess
@@ -179,12 +184,14 @@ export default async function TjenestePage({ params }: Props) {
               </div>
             ))}
           </div>
+          </div>
         </section>
       )}
 
       {/* ─── RELATERTE TJENESTER ───────────────────────────────────── */}
       {service.relatedServices?.length > 0 && (
-        <section className="px-6 md:px-12 xl:px-20 py-16 border-t border-black/8">
+        <section className="py-16 border-t border-black/8">
+          <div className="sc">
           <p className="text-[11px] font-medium tracking-[0.14em] uppercase text-green-light mb-6">Relaterte tjenester</p>
           <div className="flex flex-wrap gap-3">
             {service.relatedServices.map((r: { _id: string; slug: string; title: string; tagline?: string }) => (
@@ -200,12 +207,14 @@ export default async function TjenestePage({ params }: Props) {
               </Link>
             ))}
           </div>
+          </div>
         </section>
       )}
 
       {/* ─── FAQ WIDGET — like over CTA ────────────────────────────── */}
       {service.faqQuestions?.length > 0 && (
-        <section className="px-6 md:px-12 xl:px-20 py-16 border-t border-black/8">
+        <section className="py-16 border-t border-black/8">
+          <div className="sc">
           <div className="max-w-[760px]">
             <p className="text-[11px] font-medium tracking-[0.14em] uppercase text-green-light mb-4">
               Vanlige spørsmål
@@ -215,12 +224,13 @@ export default async function TjenestePage({ params }: Props) {
             </h2>
             <FAQWidget faqQuestions={service.faqQuestions} />
           </div>
+          </div>
         </section>
       )}
 
       {/* ─── AVSLUTNINGS-CTA ───────────────────────────────────────── */}
-      <section className="bg-green-pale py-24 px-6 md:px-12 xl:px-20">
-        <div className="max-w-[1280px] mx-auto flex flex-col xl:flex-row xl:items-center xl:justify-between gap-10">
+      <section className="bg-green-pale py-24">
+        <div className="max-w-[1200px] mx-auto px-6 flex flex-col xl:flex-row xl:items-center xl:justify-between gap-10">
           <div>
             <h2 className="font-display text-[clamp(28px,3vw,44px)] tracking-[-0.012em] leading-[1.1] text-green-deep max-w-[540px]">
               {service.cta?.heading || `Klar for å komme i gang med ${service.title.toLowerCase()}?`}

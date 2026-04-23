@@ -178,7 +178,7 @@ export default async function HomePage() {
   return (
     <>
       {/* ─── HERO ──────────────────────────────────────────────────────────── */}
-      <section className="min-h-screen grid xl:grid-cols-2 pt-16">
+      <section className="min-h-screen grid xl:grid-cols-2 pt-16 max-w-[1200px] mx-auto">
         {/* Venstre */}
         <div className="flex flex-col justify-center px-6 md:px-12 xl:px-20 py-20 xl:py-28">
           {/* Badge */}
@@ -240,7 +240,8 @@ export default async function HomePage() {
       </section>
 
       {/* ─── TJENESTER ─────────────────────────────────────────────────────── */}
-      <section className="bg-cream py-24 xl:py-28 px-6 md:px-12 xl:px-20">
+      <section className="bg-cream py-24 xl:py-28">
+        <div className="sc">
         <p className="text-[11px] font-medium tracking-[0.14em] uppercase text-green-light mb-4">
           Tjenester
         </p>
@@ -286,10 +287,12 @@ export default async function HomePage() {
             </Link>
           ))}
         </div>
+        </div>
       </section>
 
       {/* ─── SLIK JOBBER VI ────────────────────────────────────────────────── */}
-      <section className="px-6 md:px-12 xl:px-20 py-24 xl:py-28">
+      <section className="py-24 xl:py-28">
+        <div className="sc">
         <div className="grid xl:grid-cols-2 gap-16 xl:gap-20 items-start">
           <div>
             <p className="text-[11px] font-medium tracking-[0.14em] uppercase text-green-light mb-4">
@@ -355,14 +358,15 @@ export default async function HomePage() {
             </div>
           </div>
         </div>
+        </div>
       </section>
 
       {/* ─── SYNLIGHETSSJEKK-QUIZ ────────────────────────────────────────────── */}
       <VisibilityQuiz urgencyText={urgencyText} />
 
       {/* ─── NETTSIDEUTKAST TEASER ───────────────────────────────────────────── */}
-      <section className="bg-green-deep py-24 xl:py-28 px-6 md:px-12 xl:px-20">
-        <div className="max-w-[1280px] mx-auto flex flex-col xl:flex-row xl:items-center xl:justify-between gap-12">
+      <section className="bg-green-deep py-24 xl:py-28">
+        <div className="max-w-[1200px] mx-auto px-6 flex flex-col xl:flex-row xl:items-center xl:justify-between gap-12">
           <div className="max-w-[580px]">
             <p className="text-[11px] font-bold tracking-[0.18em] uppercase text-accent mb-4">
               Gratis verktøy
@@ -393,7 +397,8 @@ export default async function HomePage() {
       </section>
 
       {/* ─── TESTIMONIALS ──────────────────────────────────────────────────── */}
-      <section className="bg-black py-24 xl:py-28 px-6 md:px-12 xl:px-20">
+      <section className="bg-black py-24 xl:py-28">
+        <div className="sc">
         <p className="text-[11px] font-medium tracking-[0.14em] uppercase text-green-glow mb-4">
           Hva kundene sier
         </p>
@@ -423,14 +428,15 @@ export default async function HomePage() {
             </div>
           ))}
         </div>
+        </div>
       </section>
 
       {/* ─── ROI-KALKULATOR ────────────────────────────────────────────────── */}
       <ROICalculator urgencyText={urgencyText} />
 
       {/* ─── GLOBAL CTA ────────────────────────────────────────────────────── */}
-      <section className="bg-green-pale py-24 xl:py-32 px-6 md:px-12 xl:px-20">
-        <div className="max-w-[1280px] mx-auto flex flex-col xl:flex-row xl:items-center xl:justify-between gap-10">
+      <section className="bg-green-pale py-24 xl:py-32">
+        <div className="max-w-[1200px] mx-auto px-6 flex flex-col xl:flex-row xl:items-center xl:justify-between gap-10">
           <div>
             <p className="text-[11px] font-medium tracking-[0.14em] uppercase text-green-deep/60 mb-4">
               Kom i gang

@@ -95,7 +95,7 @@ export function VisibilityQuiz({ urgencyText }: UrgencyProps) {
   }
 
   return (
-    <section className="px-6 md:px-12 xl:px-20 py-20">
+    <section className="px-6 py-20">
       <div className="max-w-[700px] mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
