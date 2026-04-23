@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { Plus_Jakarta_Sans } from 'next/font/google'
 import Script from 'next/script'
+import { client } from '@/sanity/lib/client'
+import { groq } from 'next-sanity'
 import './globals.css'
 
 const plusJakartaSans = Plus_Jakarta_Sans({
@@ -26,9 +28,6 @@ export const metadata: Metadata = {
     images: [{ url: '/og-image.png', width: 1200, height: 630 }],
   },
   twitter: { card: 'summary_large_image' },
-  icons: {
-    icon: 'https://salesup.no/wp-content/uploads/2025/01/cropped-Asset-1-32x32.png',
-  },
   robots: { index: true, follow: true },
   alternates: { canonical: 'https://salesup.no' },
 }
@@ -59,16 +58,29 @@ const organizationSchema = {
   ],
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  let faviconUrl: string | null = null
+  try {
+    const data = await client.fetch<{ faviconUrl: string | null }>(
+      groq`*[_type == "siteSettings"][0]{ "faviconUrl": favicon.asset->url }`,
+      {},
+      { next: { revalidate: 3600 } }
+    )
+    faviconUrl = data?.faviconUrl ?? null
+  } catch { /* bruker fallback */ }
+
   return (
     <html
       lang="nb"
       className={`${plusJakartaSans.variable} h-full`}
     >
+      <head>
+        {faviconUrl && <link rel="icon" href={faviconUrl} />}
+      </head>
       <body className="min-h-full flex flex-col">
         {children}
         <Script

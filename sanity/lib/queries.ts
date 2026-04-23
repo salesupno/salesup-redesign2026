@@ -28,7 +28,8 @@ export const siteSettingsQuery = groq`
     phone,
     orgNr,
     linkedinUrl,
-    address
+    address,
+    "faviconUrl": favicon.asset->url
   }
 `
 

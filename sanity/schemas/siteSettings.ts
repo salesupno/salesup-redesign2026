@@ -213,6 +213,15 @@ export const siteSettings = defineType({
     defineField({ name: 'orgNr', title: 'Org.nr.', type: 'string' }),
     defineField({ name: 'linkedinUrl', title: 'LinkedIn URL', type: 'url' }),
     defineField({ name: 'address', title: 'Adresse', type: 'string' }),
+
+    // Favicon
+    defineField({
+      name: 'favicon',
+      title: 'Favicon',
+      type: 'image',
+      description: 'Last opp favicon (anbefalt: 32×32 eller 64×64 px PNG)',
+      options: { hotspot: false },
+    }),
   ],
   preview: {
     prepare() {
