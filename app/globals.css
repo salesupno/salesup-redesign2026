@@ -60,6 +60,14 @@
   padding-right: 1.5rem;
 }
 
+/* På skjermer ≥1248px (1200px + 2×24px) gir sentrering nok luft — padding blir overflødig */
+@media (min-width: 1248px) {
+  .sc {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
 /* ─── Base styles ────────────────────────────────────────────── */
 
 *, *::before, *::after {
