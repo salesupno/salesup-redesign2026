@@ -18,10 +18,11 @@ const fallbackSettings = {
         { label: 'FAQ', href: '/faq', description: 'Svar på de vanligste spørsmålene' },
         { label: 'Faguttrykk', href: '/faguttrykk', description: 'Ordliste A–Å for digital markedsføring' },
         { label: 'Om oss', href: '/om-oss', description: 'Teamet bak SalesUp Norway' },
+        { label: 'Kontakt oss', href: '/kontakt', description: 'Ta kontakt med oss direkte' },
       ],
     },
   ],
-  navCTA: { label: 'Book analyse', href: '/kontakt' },
+  navCTA: { label: 'Book analyse', href: '/book-analyse' },
   footerColumns: [
     {
       heading: 'Tjenester',
