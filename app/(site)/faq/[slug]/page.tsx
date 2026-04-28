@@ -195,7 +195,7 @@ export default async function FAQQuestionPage({ params }: Props) {
             faktisk er mulig.
           </p>
           <div className="flex flex-wrap gap-4">
-            <Button href="/kontakt" variant="primary">Book gratis analyse →</Button>
+            <Button href="/book-analyse" variant="primary">Book gratis analyse →</Button>
             <Link href="/faq" className="text-[15px] font-medium text-green-deep hover:text-green-mid transition-colors inline-flex items-center gap-1.5 py-4">
               ← Alle spørsmål
             </Link>

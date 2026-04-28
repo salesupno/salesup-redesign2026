@@ -151,7 +151,7 @@ export default async function ProdukterPage() {
             Alle produktene er bygget av teamet bak SalesUp. Ta kontakt — vi hjelper deg med oppsett, integrasjon og strategi.
           </p>
           <Link
-            href="/kontakt"
+            href="/book-analyse"
             className="inline-flex items-center gap-2 bg-accent text-black font-semibold px-8 py-4 rounded-full hover:bg-accent-dark transition-colors"
           >
             Ta kontakt →

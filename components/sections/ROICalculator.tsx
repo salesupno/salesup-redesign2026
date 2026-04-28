@@ -168,7 +168,7 @@ export function ROICalculator({ urgencyText }: ROICalculatorProps) {
                 </div>
               )}
               <Link
-                href="/kontakt"
+                href="/book-analyse"
                 className="block text-center bg-accent text-black font-medium px-6 py-4 rounded-full hover:bg-accent-dark transition-colors text-[14px]"
               >
                 Book gratis analyse →

@@ -73,7 +73,7 @@ export default async function TjenesterPage() {
           Vi kombinerer tradisjonell SEO med AI-drevet synlighet og konverteringsoptimalisering —
           alt koordinert som én strategi.
         </p>
-        <Button href="/kontakt" variant="primary">Få gratis synlighetsanalyse →</Button>
+        <Button href="/book-analyse" variant="primary">Få gratis synlighetsanalyse →</Button>
         </div>
       </section>
 
@@ -138,7 +138,7 @@ export default async function TjenesterPage() {
             </p>
           </div>
           <div className="flex flex-wrap gap-4 shrink-0">
-            <Button href="/kontakt" variant="primary">Book gratis analyse →</Button>
+            <Button href="/book-analyse" variant="primary">Book gratis analyse →</Button>
             <Button href="/resultater" variant="ghost">Se resultater</Button>
           </div>
         </div>

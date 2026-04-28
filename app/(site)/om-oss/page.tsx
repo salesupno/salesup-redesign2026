@@ -185,7 +185,7 @@ export default async function OmOssPage() {
             </p>
           </div>
           <div className="flex flex-wrap gap-4 shrink-0">
-            <Button href="/kontakt" variant="primary">Book gratis analyse →</Button>
+            <Button href="/book-analyse" variant="primary">Book gratis analyse →</Button>
             <Button href="/resultater" variant="outline-dark">Se resultater</Button>
           </div>
         </div>

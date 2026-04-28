@@ -279,7 +279,7 @@ export default async function PostPage({ params }: Props) {
           <p className="text-[17px] font-light text-black/60 leading-[1.7] mb-8">
             Book en gratis synlighetsanalyse og få konkrete anbefalinger for din situasjon.
           </p>
-          <Button href="/kontakt" variant="primary">Book gratis analyse →</Button>
+          <Button href="/book-analyse" variant="primary">Book gratis analyse →</Button>
         </div>
       </section>
     </>

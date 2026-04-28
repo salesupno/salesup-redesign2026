@@ -179,14 +179,14 @@ export default async function ProduktPage({ params }: Props) {
               </a>
             ) : (
               <Link
-                href="/kontakt"
+                href="/book-analyse"
                 className="inline-flex items-center gap-2 bg-accent text-black font-semibold px-8 py-4 rounded-full hover:bg-accent-dark transition-colors text-lg"
               >
                 Kom i gang →
               </Link>
             )}
             <Link
-              href="/kontakt"
+              href="/book-analyse"
               className="text-white/60 hover:text-white transition-colors font-medium"
             >
               Spør oss om dette produktet
@@ -319,7 +319,7 @@ export default async function ProduktPage({ params }: Props) {
               </a>
             ) : (
               <Link
-                href="/kontakt"
+                href="/book-analyse"
                 className="inline-flex items-center gap-2 bg-accent text-black font-semibold px-8 py-4 rounded-full hover:bg-accent-dark transition-colors"
               >
                 Kom i gang →

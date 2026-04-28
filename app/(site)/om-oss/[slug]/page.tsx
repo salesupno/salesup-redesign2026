@@ -195,7 +195,7 @@ export default async function TeamMemberPage({ params }: Props) {
               </div>
             )}
 
-            <Button href="/kontakt" variant="primary">
+            <Button href="/book-analyse" variant="primary">
               Ta kontakt med {member.name.split(' ')[0]} →
             </Button>
           </div>

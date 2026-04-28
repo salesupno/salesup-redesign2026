@@ -188,7 +188,7 @@ export default async function ResultaterPage() {
           </p>
           <div className="flex flex-wrap gap-4">
             <Link
-              href="/kontakt"
+              href="/book-analyse"
               className="inline-flex items-center gap-2 bg-green-deep text-accent font-medium px-8 py-4 rounded-full hover:bg-green-mid transition-colors text-[15px]"
             >
               Book gratis analyse →

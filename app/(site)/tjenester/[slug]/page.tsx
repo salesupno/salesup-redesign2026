@@ -127,7 +127,7 @@ export default async function TjenestePage({ params }: Props) {
           </p>
         )}
         <div className="flex flex-wrap gap-4">
-          <Button href="/kontakt" variant="primary">Få gratis analyse →</Button>
+          <Button href="/book-analyse" variant="primary">Få gratis analyse →</Button>
           <Button href="/resultater" variant="ghost">Se resultater</Button>
         </div>
         </div>
@@ -241,7 +241,7 @@ export default async function TjenestePage({ params }: Props) {
             </p>
           </div>
           <div className="flex flex-wrap gap-4 shrink-0">
-            <Button href="/kontakt" variant="primary">
+            <Button href="/book-analyse" variant="primary">
               {service.cta?.primaryLabel || 'Book gratis analyse →'}
             </Button>
             <Button href="/resultater" variant="outline-dark">Se resultater</Button>

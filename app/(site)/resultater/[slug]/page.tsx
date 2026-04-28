@@ -221,7 +221,7 @@ export default async function CaseStudyPage({ params }: Props) {
             Book en gratis synlighetsanalyse og finn ut hva som er mulig for din bedrift.
           </p>
           <div className="flex flex-wrap gap-4">
-            <Button href="/kontakt" variant="primary">Book gratis analyse →</Button>
+            <Button href="/book-analyse" variant="primary">Book gratis analyse →</Button>
             <Link href="/resultater" className="text-[15px] font-medium text-green-deep hover:text-green-mid transition-colors inline-flex items-center py-4">
               ← Alle case
             </Link>

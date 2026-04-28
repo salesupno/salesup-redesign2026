@@ -161,7 +161,7 @@ export default async function FAQPage() {
           </p>
           <div className="flex flex-wrap gap-4">
             <Link
-              href="/kontakt"
+              href="/book-analyse"
               className="bg-green-deep hover:bg-green-mid text-white rounded-full px-7 py-4 text-[15px] font-medium transition-all hover:-translate-y-0.5 inline-flex items-center gap-2"
             >
               Ta kontakt →

@@ -204,7 +204,7 @@ export default async function GlossaryTermPage({ params }: Props) {
             Book en gratis analyse og få konkrete anbefalinger tilpasset din bransje og situasjon.
           </p>
           <div className="flex flex-wrap gap-4">
-            <Button href="/kontakt" variant="primary">Book gratis analyse →</Button>
+            <Button href="/book-analyse" variant="primary">Book gratis analyse →</Button>
             <Link href="/faguttrykk" className="text-[15px] font-medium text-green-deep hover:text-green-mid transition-colors inline-flex items-center gap-1.5 py-4">
               ← Alle faguttrykk
             </Link>

@@ -732,7 +732,7 @@ export default async function HomePage() {
           </div>
 
           <div className="mt-10 flex flex-wrap gap-4">
-            <Button href="/kontakt" variant="primary">
+            <Button href="/book-analyse" variant="primary">
               Book gratis analyse →
             </Button>
             <Button href="/tjenester" variant="outline-dark">
@@ -998,7 +998,7 @@ export default async function HomePage() {
           <div className="flex flex-col gap-3 shrink-0">
             <UrgencyBadge text={urgencyText} variant="light" />
             <div className="flex flex-wrap gap-4">
-            <Button href="/kontakt" variant="primary">
+            <Button href="/book-analyse" variant="primary">
               Book gratis analyse →
             </Button>
             <Button href="tel:+4740000000" variant="outline-dark">

@@ -43,7 +43,7 @@ export function StickyBar() {
           Ring oss
         </a>
         <Link
-          href="/kontakt"
+          href="/book-analyse"
           className="bg-accent text-black font-medium px-6 py-2.5 rounded-full text-[13px] hover:bg-accent-dark transition-colors"
         >
           Book gratis analyse →

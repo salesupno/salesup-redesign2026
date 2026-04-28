@@ -91,7 +91,7 @@ export function VisibilityQuiz({ urgencyText }: UrgencyProps) {
 
   function handleCTA() {
     const params = new URLSearchParams({ quiz: 'completed', ...answers })
-    router.push(`/kontakt?${params.toString()}`)
+    router.push(`/book-analyse?${params.toString()}`)
   }
 
   return (
