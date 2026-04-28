@@ -81,8 +81,11 @@ export default async function SiteLayout({
 
   return (
     <>
+      <a href="#main-content" className="skip-link">
+        Hopp til hovedinnhold
+      </a>
       <Nav navLinks={navLinks} navCTA={navCTA} />
-      <main>{children}</main>
+      <main id="main-content">{children}</main>
       <StickyBar />
       <Footer
         footerColumns={footerColumns}

@@ -85,14 +85,14 @@ export default async function FAQQuestionPage({ params }: Props) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* ─── HERO ──────────────────────────────────────────────────── */}
-      <section className="pt-32 pb-10 px-6 md:px-12 xl:px-20 max-w-[900px]">
+      <section className="pt-32 pb-10 px-6 md:px-12 xl:px-20 max-w-[900px] mx-auto">
         <nav aria-label="Brødsmulesti" className="mb-10">
           <ol className="flex items-center gap-2 text-[13px] text-muted">
             <li><Link href="/" className="hover:text-green-deep transition-colors">Forside</Link></li>
             <li aria-hidden="true" className="text-black/20">›</li>
             <li><Link href="/faq" className="hover:text-green-deep transition-colors">FAQ</Link></li>
             <li aria-hidden="true" className="text-black/20">›</li>
-            <li className="text-black font-medium truncate max-w-[200px]">{question.question}</li>
+            <li aria-current="page" className="text-black font-medium truncate max-w-[200px]">{question.question}</li>
           </ol>
         </nav>
 
@@ -119,7 +119,7 @@ export default async function FAQQuestionPage({ params }: Props) {
 
       {/* ─── FULLT SVAR ────────────────────────────────────────────── */}
       {question.fullAnswer && (
-        <section className="px-6 md:px-12 xl:px-20 pb-12 max-w-[760px]">
+        <section className="px-6 md:px-12 xl:px-20 pb-12 max-w-[760px] mx-auto">
           <div className="prose prose-lg max-w-none prose-headings:font-display prose-headings:tracking-tight prose-a:text-green-deep prose-a:no-underline hover:prose-a:underline">
             {/* Portable Text rendres her — placeholder til vi legger til PT-renderer */}
             <p className="text-[16px] text-muted leading-[1.8]">
@@ -131,7 +131,7 @@ export default async function FAQQuestionPage({ params }: Props) {
 
       {/* ─── INLINE CTA ─────────────────────────────────────────────── */}
       {question.inlineCTA?.text && (
-        <section className="px-6 md:px-12 xl:px-20 py-12 max-w-[760px]">
+        <section className="px-6 md:px-12 xl:px-20 py-12 max-w-[760px] mx-auto">
           <div className="bg-cream border border-black/8 rounded-2xl p-8">
             <p className="text-[16px] font-light text-black leading-[1.7] mb-5">
               {question.inlineCTA.text}
@@ -147,7 +147,7 @@ export default async function FAQQuestionPage({ params }: Props) {
 
       {/* ─── RELATERTE SPØRSMÅL ────────────────────────────────────── */}
       {question.relatedQuestions?.length > 0 && (
-        <section className="px-6 md:px-12 xl:px-20 py-12 border-t border-black/8 max-w-[900px]">
+        <section className="px-6 md:px-12 xl:px-20 py-12 border-t border-black/8 max-w-[900px] mx-auto">
           <p className="text-[11px] font-medium tracking-[0.14em] uppercase text-green-light mb-6">
             Relaterte spørsmål
           </p>
@@ -157,7 +157,7 @@ export default async function FAQQuestionPage({ params }: Props) {
 
       {/* ─── RELATED CONTENT ───────────────────────────────────────── */}
       {(question.relatedServices?.length > 0 || question.relatedTerms?.length > 0) && (
-        <section className="px-6 md:px-12 xl:px-20 py-12 border-t border-black/8 max-w-[900px]">
+        <section className="px-6 md:px-12 xl:px-20 py-12 border-t border-black/8 max-w-[900px] mx-auto">
           <p className="text-[11px] font-medium tracking-[0.14em] uppercase text-green-light mb-6">
             Les mer
           </p>
@@ -186,7 +186,7 @@ export default async function FAQQuestionPage({ params }: Props) {
 
       {/* ─── AVSLUTNINGS-CTA ───────────────────────────────────────── */}
       <section className="bg-green-pale py-20 px-6 md:px-12 xl:px-20 mt-8">
-        <div className="max-w-[640px]">
+        <div className="max-w-[640px] mx-auto">
           <h2 className="font-display text-[clamp(24px,2.5vw,36px)] tracking-[-0.012em] leading-[1.1] text-green-deep mb-4">
             Vil du se hva dette betyr for deg konkret?
           </h2>
