@@ -263,37 +263,34 @@ export function BookAnalyseWizard() {
     setSubmitting(true)
     setError('')
 
-    const slotObj = slots.find(s => s.value === answers.slot)
-    const contextNote = [
-      answers.source ? `Kom fra: ${sourceLabels[answers.source] ?? answers.source}` : null,
-      answers.service ? `Tjeneste-interesse: ${answers.service}` : null,
-    ].filter(Boolean).join(' | ')
-
     const body = {
-      name: answers.navn ?? '',
-      company: answers.bedrift ?? '',
-      email: answers.epost ?? '',
-      message: [
-        `📅 Tidspunkt: ${slotObj ? `${slotObj.day} kl. ${slotObj.time}` : answers.slot}`,
-        `🏷️ Bransje: ${answers.bransje ?? '—'}`,
-        `👤 Rolle: ${answers.stilling ?? '—'}`,
-        `🎯 Mål: ${answers.maal ?? '—'}`,
-        `💰 Budsjett nå: ${answers.naa ?? '—'}`,
-        answers.telefon ? `📱 Tlf: ${answers.telefon}` : null,
-        contextNote ? `\n🔗 Kontekst: ${contextNote}` : null,
-      ].filter(Boolean).join('\n'),
+      navn:     answers.navn     ?? '',
+      bedrift:  answers.bedrift  ?? '',
+      epost:    answers.epost    ?? '',
+      telefon:  answers.telefon  ?? '',
+      bransje:  answers.bransje  ?? '',
+      stilling: answers.stilling ?? '',
+      maal:     answers.maal     ?? '',
+      naa:      answers.naa      ?? '',
+      slot:     answers.slot     ?? '',
+      source:   answers.source   ?? '',
+      service:  answers.service  ?? '',
     }
 
     try {
-      const res = await fetch('/api/lead', {
+      const res = await fetch('/api/book-analyse', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(body),
       })
-      if (!res.ok) throw new Error()
+      const data = await res.json().catch(() => ({}))
+      if (!res.ok) {
+        setError((data as { error?: string }).error ?? 'Noe gikk galt. Prøv igjen eller ring oss på +47 975 28 712.')
+        return
+      }
       setSubmitted(true)
     } catch {
-      setError('Noe gikk galt. Prøv igjen eller ring oss på +47 913 49 916.')
+      setError('Noe gikk galt. Prøv igjen eller ring oss på +47 975 28 712.')
     } finally {
       setSubmitting(false)
     }

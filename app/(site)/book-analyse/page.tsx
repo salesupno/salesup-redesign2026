@@ -62,7 +62,7 @@ export default async function BookAnalysePage() {
               SalesUp
             </Link>
             <a
-              href="tel:+4791349916"
+              href="tel:+4797528712"
               className="text-[13px] text-muted/70 hover:text-green-deep transition-colors flex items-center gap-1.5"
             >
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -74,7 +74,7 @@ export default async function BookAnalysePage() {
                   strokeLinejoin="round"
                 />
               </svg>
-              +47 913 49 916
+              +47 975 28 712
             </a>
           </div>
         </header>
